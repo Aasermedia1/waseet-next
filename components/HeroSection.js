@@ -39,16 +39,22 @@ export default function HeroSection() {
           <div className="relative w-80 h-[420px]">
             <Image src="/new-phone.png" layout="fill" objectFit="contain" alt="Chat Demo" />
             <div className="absolute top-16 left-4 right-4 h-3/4 overflow-hidden bg-white rounded-xl shadow-lg px-2 py-3 space-y-2">
-              {displayed.map((msg, idx) => (
-                <div
-                  key={idx}
-                  className={`max-w-[90%] px-3 py-1 rounded-lg ${
-                    msg.startsWith("وسيط") ? "bg-green-100 ml-auto" : "bg-gray-100"
-                  }`}
-                >
-                  {msg}
-                </div>
-              ))}
+             {displayed.map((msg, idx) => (
+                  <div
+                key={idx}
+            className={`max-w-[90%] px-3 py-1 rounded-lg ${
+             typeof msg === "string" && msg.startsWith("وسيط")
+            ? "bg-green-100 ml-auto"
+            : "bg-gray-100"
+       }`}
+      >
+    {typeof msg === "string" ? msg : ""}
+  </div>
+))}
+
+
+
+    
               {typing && (
                 <div className="flex gap-1 ml-1">
                   <span className="dot animate-pulse">.</span>
