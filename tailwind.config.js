@@ -1,12 +1,14 @@
 // tailwind.config.js
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,jsx}',
+    './components/**/*.{js,jsx}',
   ],
   theme: {
-    extend: {
-      colors: {
+    extend: {},
+  },
+  plugins: [],
+};
         primary: '#00A859', // Customize this to your brand color
         secondary: '#FFFFFF',
       },
