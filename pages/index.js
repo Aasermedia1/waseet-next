@@ -6,83 +6,62 @@ export default function Home() {
     <>
       <Head>
         <title>وسيط - موظف مبيعاتك الذكي</title>
-        <meta name="description" content="موظف مبيعات ذكي يرد على عملائك على واتساب 24/7" />
+        <meta
+          name="description"
+          content="وظف وسيط مبيعات ذكي في شركتك خلال دقائق وابدأ بجذب عملاء جدد 24/7"
+        />
       </Head>
 
-      <main dir="rtl" className="font-sans bg-white">
-        {/* ✅ Navigation Bar */}
-        <header style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          padding: '1rem 2rem',
-          borderBottom: '1px solid #e0e0e0',
-          backgroundColor: '#ffffff',
-          position: 'sticky',
-          top: 0,
-          zIndex: 1000
-        }}>
+      <main dir="rtl" className="font-cairo bg-white">
+        {/* Navigation Bar */}
+        <header className="flex items-center justify-between py-4 px-8 border-b bg-white sticky top-0 z-50">
           {/* Logo */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <div className="flex items-center gap-3">
             <Image src="/logo.png" alt="وسيط" width={40} height={40} />
-            <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#2c3e50' }}>وسيط</span>
+            <span className="text-[1.2rem] font-bold text-[#2c3e50]">وسيط</span>
           </div>
 
           {/* Nav Links */}
           <nav className="font-tajawal">
-            <ul style={{
-              display: 'flex',
-              gap: '24px',
-              listStyle: 'none',
-              margin: 0,
-              padding: 0
-            }}>
+            <ul className="flex gap-6 list-none m-0 p-0">
               <li>
-  <a 
-    href="#how" 
-    className="text-[1rem] font-bold text-[#333] no-underline transition-transform duration-300 hover:scale-105"
-  >
-    إزاي بيشتغل
-  </a>
-</li>
-<li>
-  <a 
-    href="#pricing" 
-    className="text-[1rem] font-bold text-[#333] no-underline transition-transform duration-300 hover:scale-105"
-  >
-    الأسعار
-  </a>
-</li>
-<li>
-  <a 
-    href="#faq" 
-    className="text-[1rem] font-bold text-[#333] no-underline transition-transform duration-300 hover:scale-105"
-  >
-    الأسئلة
-  </a>
-</li>
-<li>
-  <a 
-    href="#contact" 
-    className="text-[1rem] font-bold text-[#333] no-underline transition-transform duration-300 hover:scale-105"
-  >
-    تواصل معنا
-  </a>
-</li>
+                <a
+                  href="#how"
+                  className="text-[1rem] font-bold text-[#333] no-underline transition-transform duration-300 hover:scale-105"
+                >
+                  إزاي بيشتغل
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#pricing"
+                  className="text-[1rem] font-bold text-[#333] no-underline transition-transform duration-300 hover:scale-105"
+                >
+                  الأسعار
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#faq"
+                  className="text-[1rem] font-bold text-[#333] no-underline transition-transform duration-300 hover:scale-105"
+                >
+                  الأسئلة
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  className="text-[1rem] font-bold text-[#333] no-underline transition-transform duration-300 hover:scale-105"
+                >
+                  تواصل معنا
+                </a>
+              </li>
             </ul>
           </nav>
 
           {/* CTA Button */}
-          <button style={{
-            background: '#27ae60',
-            color: '#fff',
-            padding: '10px 20px',
-            fontSize: '1rem',
-            borderRadius: '6px',
-            border: 'none',
-            cursor: 'pointer'
-          }}>
-            ابدأ مجاناً
+          <button className="bg-[#27ae60] text-white py-2 px-5 rounded-md text-[1rem] font-bold hover:scale-105 transition-transform duration-300">
+            إبدا مجاناً
           </button>
         </header>
       </main>
