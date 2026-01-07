@@ -1,3 +1,4 @@
+import Navbar from '../components/Navbar';
 // pages/index.js
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
