@@ -2,14 +2,12 @@
 
 html {
   direction: rtl;
-  font-family: 'Tajawal', 'Cairo', sans-serif;
+  font-family: 'Tajawal', 'sans-serif';
   scroll-behavior: smooth;
-  background-color: #fff;
-  color: #1a1a1a;
 }
 
 body {
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  font-family: 'Tajawal', 'sans-serif';
 }
