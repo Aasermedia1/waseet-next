@@ -9,3 +9,23 @@
 body {
   @apply font-cairo;
 }
+@layer utilities {
+  .animate-bounce {
+    animation: bounce 1s infinite;
+  }
+  .delay-150 {
+    animation-delay: 150ms;
+  }
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-3px);
+    }
+  }
+}
