@@ -1,22 +1,28 @@
-// components/PricingSection.js
-export default function PricingSection() {
+// components/Pricing.js
+export default function Pricing() {
   return (
-    <section dir="rtl" style={{ padding: '4rem 1rem', backgroundColor: '#f9f9f9', textAlign: 'center' }}>
-      <h2 style={{ fontSize: '1.8rem', marginBottom: '2rem' }}>أسعار واضحة وشفافة</h2>
-      <div style={{ maxWidth: '320px', margin: '0 auto', backgroundColor: '#fff', padding: '2rem', borderRadius: '12px', boxShadow: '0 2px 10px rgba(0,0,0,0.06)' }}>
-        <p style={{ fontSize: '1.1rem', fontWeight: 'bold', marginBottom: '1rem' }}>الباقة الأساسية</p>
-        <p style={{ fontSize: '2rem', color: '#16a34a', margin: '0 0 1rem' }}>195 جنيه / شهرياً</p>
-        <ul style={{ textAlign: 'right', padding: 0, listStyle: 'none', lineHeight: '2' }}>
-          <li>✅ حتى 500 رسالة يومياً</li>
-          <li>✅ ردود تلقائية ذكية</li>
-          <li>✅ إدارة الطلبات</li>
-          <li>✅ تقارير تفصيلية</li>
-          <li>✅ دعم فني على مدار الساعة</li>
-          <li>✅ تكامل مع إنستجرام</li>
-        </ul>
-        <button style={{ marginTop: '1rem', backgroundColor: '#16a34a', color: '#fff', padding: '0.75rem 1.5rem', border: 'none', borderRadius: '6px', cursor: 'pointer' }}>
-          اشترك الآن
-        </button>
+    <section id="pricing" className="py-12 bg-gray-50 text-right">
+      <h2 className="text-2xl font-bold text-center mb-8">الأسعار</h2>
+      <div className="container mx-auto px-4 flex justify-center">
+        <div className="bg-white p-8 rounded-xl shadow-lg max-w-md text-center">
+          <h3 className="text-xl font-bold mb-4">باقة واحدة شاملة</h3>
+          <p className="text-4xl font-extrabold text-green-600 mb-4">195 جنيه / شهر</p>
+          <ul className="text-right space-y-2 mb-6">
+            <li>✔️ حتى 500 رسالة يومياً</li>
+            <li>✔️ ردود تلقائية ذكية</li>
+            <li>✔️ إدارة الطلبات</li>
+            <li>✔️ تقارير تفصيلية</li>
+            <li>✔️ دعم فني على مدار الساعة</li>
+            <li>✔️ تكامل مع إنستجرام</li>
+          </ul>
+          <a
+            href="https://wa.me/201063595202"
+            target="_blank"
+            className="bg-green-600 text-white px-6 py-3 rounded-md font-bold inline-block hover:bg-green-700 transition"
+          >
+            اشترك الآن
+          </a>
+        </div>
       </div>
     </section>
   );
