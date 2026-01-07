@@ -13,17 +13,17 @@ export default function Home() {
       </Head>
 
       <main dir="rtl" className="bg-white font-cairo min-h-screen">
-        {/* Navigation */}
+        {/* NAVIGATION */}
         <header className="flex items-center justify-between py-4 px-8 border-b bg-white sticky top-0 z-50">
-          {/* Logo */}
+          {/* LOGO */}
           <div className="flex items-center gap-3">
-            <Image src="/logo.png" alt="وسيط" width={40} height={40} />
+            <Image src="/logo.png" alt="Logo" width={40} height={40} />
             <span className="text-xl font-bold">وسيط</span>
           </div>
 
-          {/* Nav Links */}
-          <nav>
-            <ul className="flex gap-8 list-none p-0 m-0 font-tajawal">
+          {/* NAV LINKS */}
+          <nav className="font-tajawal">
+            <ul className="flex gap-8 list-none m-0 p-0">
               <li>
                 <a
                   href="#how"
@@ -65,10 +65,12 @@ export default function Home() {
           </button>
         </header>
 
-        {/* Placeholder Content */}
+        {/* Sample Content */}
         <section className="py-20 px-8 text-center">
           <h1 className="text-4xl font-bold mb-4">مرحباً بك في وسيط</h1>
-          <p className="text-lg text-gray-600">ابدأ الآن واستفد من مزايا الذكاء الاصطناعي</p>
+          <p className="text-lg text-gray-700 max-w-xl mx-auto">
+            ابدأ الآن واستفد من مزايا الذكاء الاصطناعي في مبيعاتك
+          </p>
         </section>
       </main>
     </>
