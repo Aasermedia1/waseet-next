@@ -1,9 +1,20 @@
+import Image from 'next/image';
+
 export default function Home() {
   return (
     <div style={{ padding: '60px 20px', fontFamily: 'Arial, sans-serif' }}>
+      <Image
+        src="/logo.png"
+        alt="Waseet AI Logo"
+        width={100}
+        height={100}
+        style={{ display: 'block', margin: '0 auto 20px' }}
+      />
+
       <h1 style={{ fontSize: '2.5rem', textAlign: 'center' }}>
         Waseet: Your 24/7 AI Sales Agent
       </h1>
+
       <p style={{ fontSize: '1.2rem', textAlign: 'center', maxWidth: '700px', margin: '20px auto' }}>
         Waseet is an AI Sales Agent that replies to WhatsApp customers 24/7, answers product questions, suggests related items, and confirms orders automatically.
       </p>
