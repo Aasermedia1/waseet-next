@@ -3,12 +3,8 @@
 @tailwind utilities;
 
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
-<button className="font-tajawal px-4 py-2 bg-green-500 text-white">
-  زر بتاجوال
-</button>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap');
 
 body {
-  font-family: 'Cairo', sans-serif;
+  @apply font-cairo;
 }
