@@ -1,26 +1,29 @@
-import Head from 'next/head';
-import Image from 'next/image';
+import Head from "next/head";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>وسيط - موظف مبيعاتك الذكي</title>
-        <meta name="description" content="وظف مبيعات ذكي في شركتك على واتساب 24/7" />
+        <title>وسيط — موظف مبيعاتك الذكي</title>
+        <meta
+          name="description"
+          content="وظف وسيط مبيعات ذكي في شركتك وابدأ بجذب عملاء جدد 24/7"
+        />
       </Head>
 
-      <main dir="rtl" className="bg-white font-sans">
-        {/* Navigation */}
-        <header className="flex items-center justify-between py-4 px-8 border-b border-gray-200 bg-white sticky top-0 z-50">
-          {/* Logo */}
+      <main dir="rtl" className="bg-white font-cairo min-h-screen">
+        {/* NAVIGATION */}
+        <header className="flex items-center justify-between py-4 px-8 border-b bg-white sticky top-0 z-50">
+          {/* LOGO */}
           <div className="flex items-center gap-3">
-            <Image src="/logo.png" alt="وسيط" width={40} height={40} />
-            <span className="text-[1.2rem] font-bold font-cairo text-[#2c3e50]">وسيط</span>
+            <Image src="/logo.png" alt="logo" width={40} height={40} />
+            <span className="text-xl font-bold">وسيط</span>
           </div>
 
-          {/* Nav Links */}
+          {/* NAV LINKS */}
           <nav className="font-tajawal">
-            <ul className="flex gap-8 list-none m-0 p-0">
+            <ul className="flex gap-8 list-none p-0 m-0">
               <li>
                 <a
                   href="#how"
@@ -56,13 +59,20 @@ export default function Home() {
             </ul>
           </nav>
 
-          {/* CTA Button */}
-          <button className="bg-[#27ae60] text-white px-5 py-2 rounded-md text-lg font-bold font-tajawal transform transition duration-300 hover:scale-105">
+          {/* CTA BUTTON */}
+          <button className="bg-[#27ae60] text-white px-5 py-2 rounded-md text-lg font-tajawal font-bold transform transition duration-300 hover:scale-105">
             ابدأ مجاناً
           </button>
         </header>
 
-        {/* Content Sections Can Go Here */}
+        {/* CONTENT BELOW (PLACEHOLDER) */}
+        <section className="py-20 px-8 text-center">
+          <h1 className="text-4xl font-bold mb-4">مرحبا بك في وسيط</h1>
+          <p className="text-lg text-gray-700 max-w-xl mx-auto">
+            هذا نص تجريبي للقسم الرئيسي — يمكنك تغييره بأي محتوى تريد
+          </p>
+        </section>
+
       </main>
     </>
   );
