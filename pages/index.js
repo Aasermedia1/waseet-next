@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
 
       <main dir="rtl" className={styles.main}>
-        {/* HERO SECTION */}
+          <Navbar />  
         <section className={styles.hero}>
           <div className={styles.heroText}>
             <h1>وسيط — موظف مبيعاتك الذكي علي الواتس</h1>
