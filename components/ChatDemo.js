@@ -15,4 +15,4 @@ export default function ChatDemo() {
     </div>
   );
 }
-Add ChatDemo component
+// Add ChatDemo component
