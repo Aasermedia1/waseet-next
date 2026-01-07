@@ -29,7 +29,7 @@ export default function Home() {
           </div>
 
           {/* Nav Links */}
-          <nav>
+          <nav className="font-tajawal">
             <ul style={{
               display: 'flex',
               gap: '24px',
@@ -37,10 +37,38 @@ export default function Home() {
               margin: 0,
               padding: 0
             }}>
-              <li><a href="#how" style={navStyle}>إزاي بيشتغل</a></li>
-              <li><a href="#pricing" style={navStyle}>الأسعار</a></li>
-              <li><a href="#faq" style={navStyle}>الأسئلة</a></li>
-              <li><a href="#contact" style={navStyle}>تواصل معنا</a></li>
+              <li>
+  <a 
+    href="#how" 
+    className="text-[1rem] font-bold text-[#333] no-underline transition-transform duration-300 hover:scale-105"
+  >
+    إزاي بيشتغل
+  </a>
+</li>
+<li>
+  <a 
+    href="#pricing" 
+    className="text-[1rem] font-bold text-[#333] no-underline transition-transform duration-300 hover:scale-105"
+  >
+    الأسعار
+  </a>
+</li>
+<li>
+  <a 
+    href="#faq" 
+    className="text-[1rem] font-bold text-[#333] no-underline transition-transform duration-300 hover:scale-105"
+  >
+    الأسئلة
+  </a>
+</li>
+<li>
+  <a 
+    href="#contact" 
+    className="text-[1rem] font-bold text-[#333] no-underline transition-transform duration-300 hover:scale-105"
+  >
+    تواصل معنا
+  </a>
+</li>
             </ul>
           </nav>
 
