@@ -1,20 +1,19 @@
-// components/StatsSection.js
-export default function StatsSection() {
+// components/Stats.js
+export default function Stats() {
   const stats = [
-    { label: '24/7', desc: 'يشتغل على مدار الساعة' },
-    { label: '98%', desc: 'معدل رضا العملاء' },
-    { label: '+50K', desc: 'رسالة مُدارة' },
-    { label: '+500', desc: 'عميل خدمناهم' },
+    { value: '24/7', label: 'متاح دائماً' },
+    { value: '98%', label: 'رضا العملاء' },
+    { value: '+50K', label: 'رسالة شهرياً' },
+    { value: '+500', label: 'عميل مستخدم' },
   ];
 
   return (
-    <section dir="rtl" style={{ padding: '4rem 1rem', backgroundColor: '#fff', textAlign: 'center' }}>
-      <h2 style={{ fontSize: '1.8rem', marginBottom: '2rem' }}>أصحاب بيزنس زيك حققوا نتائج مذهلة</h2>
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap' }}>
+    <section className="py-12 bg-gray-50 text-right">
+      <div className="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
         {stats.map((stat, index) => (
-          <div key={index} style={{ minWidth: '120px', background: '#f0fdf4', padding: '1rem', borderRadius: '10px' }}>
-            <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#16a34a' }}>{stat.label}</p>
-            <p>{stat.desc}</p>
+          <div key={index} className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+            <h3 className="text-3xl font-bold text-green-600">{stat.value}</h3>
+            <p className="text-gray-700 mt-2">{stat.label}</p>
           </div>
         ))}
       </div>
