@@ -13,21 +13,21 @@ export default function Home() {
       </Head>
 
       <main dir="rtl" className="bg-white font-cairo min-h-screen">
-        {/* NAVIGATION */}
+        {/* Navigation */}
         <header className="flex items-center justify-between py-4 px-8 border-b bg-white sticky top-0 z-50">
-          {/* LOGO */}
+          {/* Logo */}
           <div className="flex items-center gap-3">
-            <Image src="/logo.png" alt="logo" width={40} height={40} />
+            <Image src="/logo.png" alt="وسيط" width={40} height={40} />
             <span className="text-xl font-bold">وسيط</span>
           </div>
 
-          {/* NAV LINKS */}
-          <nav className="font-tajawal">
-            <ul className="flex gap-8 list-none p-0 m-0">
+          {/* Nav Links */}
+          <nav>
+            <ul className="flex gap-8 list-none p-0 m-0 font-tajawal">
               <li>
                 <a
                   href="#how"
-                  className="text-lg font-bold text-[#333] no-underline transform transition duration-300 hover:scale-110"
+                  className="text-lg font-bold text-gray-800 transition-transform duration-300 hover:scale-110"
                 >
                   إزاي بيشتغل
                 </a>
@@ -35,7 +35,7 @@ export default function Home() {
               <li>
                 <a
                   href="#pricing"
-                  className="text-lg font-bold text-[#333] no-underline transform transition duration-300 hover:scale-110"
+                  className="text-lg font-bold text-gray-800 transition-transform duration-300 hover:scale-110"
                 >
                   الأسعار
                 </a>
@@ -43,7 +43,7 @@ export default function Home() {
               <li>
                 <a
                   href="#faq"
-                  className="text-lg font-bold text-[#333] no-underline transform transition duration-300 hover:scale-110"
+                  className="text-lg font-bold text-gray-800 transition-transform duration-300 hover:scale-110"
                 >
                   الأسئلة
                 </a>
@@ -51,7 +51,7 @@ export default function Home() {
               <li>
                 <a
                   href="#contact"
-                  className="text-lg font-bold text-[#333] no-underline transform transition duration-300 hover:scale-110"
+                  className="text-lg font-bold text-gray-800 transition-transform duration-300 hover:scale-110"
                 >
                   تواصل معنا
                 </a>
@@ -59,20 +59,17 @@ export default function Home() {
             </ul>
           </nav>
 
-          {/* CTA BUTTON */}
+          {/* CTA Button */}
           <button className="bg-[#27ae60] text-white px-5 py-2 rounded-md text-lg font-tajawal font-bold transform transition duration-300 hover:scale-105">
             ابدأ مجاناً
           </button>
         </header>
 
-        {/* CONTENT BELOW (PLACEHOLDER) */}
+        {/* Placeholder Content */}
         <section className="py-20 px-8 text-center">
-          <h1 className="text-4xl font-bold mb-4">مرحبا بك في وسيط</h1>
-          <p className="text-lg text-gray-700 max-w-xl mx-auto">
-            هذا نص تجريبي للقسم الرئيسي — يمكنك تغييره بأي محتوى تريد
-          </p>
+          <h1 className="text-4xl font-bold mb-4">مرحباً بك في وسيط</h1>
+          <p className="text-lg text-gray-600">ابدأ الآن واستفد من مزايا الذكاء الاصطناعي</p>
         </section>
-
       </main>
     </>
   );
