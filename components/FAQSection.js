@@ -1,47 +1,41 @@
-// components/FAQSection.js
-
+// components/FAQ.js
 import { useState } from 'react';
 
 const faqs = [
   {
-    question: 'هل في وقت معين بيشتغل وسيط؟',
-    answer: 'وسيط بيشتغل 24/7 بدون توقف.',
+    q: 'هل في وقت معين بيشتغل وسيط؟',
+    a: 'وسيط يشتغل 24/7 على مدار الساعة بدون توقف.',
   },
   {
-    question: 'هل بيشتغل مع الإنستجرام؟',
-    answer: 'نعم، وسيط بيتكامل مع إنستجرام كمان.',
+    q: 'هل وسيط آمن؟',
+    a: 'نعم، وسيط نظام آمن ويضمن حماية بياناتك.',
   },
   {
-    question: 'هل في دعم فني؟',
-    answer: 'أكيد، في دعم فني على مدار الساعة.',
+    q: 'هل يحتاج تدريب؟',
+    a: 'لا، وسيط سهل الاستخدام بدون أي خبرة تقنية.',
   },
   {
-    question: 'هل لازم يكون عندي موقع؟',
-    answer: 'مش لازم، تقدر تستخدم وسيط مباشرة مع الواتساب.',
+    q: 'هل في دعم فني؟',
+    a: 'نعم، فريق الدعم الفني جاهز يساعدك دائمًا.',
   },
 ];
 
-export default function FAQSection() {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const toggle = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
+export default function FAQ() {
+  const [openIndex, setOpenIndex] = useState(null);
 
   return (
-    <section className="py-10 px-4 max-w-3xl mx-auto">
-      <h2 className="text-2xl font-bold mb-6 text-center">الأسئلة الشائعة</h2>
-      <div className="space-y-4">
-        {faqs.map((faq, index) => (
-          <div key={index} className="border rounded-md p-4">
-            <button
-              className="w-full text-right font-medium"
-              onClick={() => toggle(index)}
-            >
-              {faq.question}
-            </button>
-            {activeIndex === index && (
-              <p className="mt-2 text-sm text-gray-600">{faq.answer}</p>
+    <section className="py-12 bg-white text-right">
+      <h2 className="text-2xl font-bold text-center mb-8">الأسئلة الشائعة</h2>
+      <div className="container mx-auto px-4 space-y-4">
+        {faqs.map((faq, i) => (
+          <div
+            key={i}
+            className="border rounded-lg p-4 cursor-pointer"
+            onClick={() => setOpenIndex(openIndex === i ? null : i)}
+          >
+            <p className="font-semibold">{faq.q}</p>
+            {openIndex === i && (
+              <p className="mt-2 text-gray-700">{faq.a}</p>
             )}
           </div>
         ))}
