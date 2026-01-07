@@ -1,29 +1,32 @@
 // components/FeaturesSection.js
-const features = [
-  { icon: '🤖', title: 'ردود تلقائية' },
-  { icon: '📦', title: 'إدارة الطلبات' },
-  { icon: '⏰', title: 'متاح 24/7' },
-  { icon: '🔗', title: 'تكامل سلس' },
-  { icon: '📊', title: 'تقارير وإحصائيات' },
-];
+import React from 'react'
 
-export default function FeaturesSection() {
+const FeaturesSection = () => {
   return (
-    <section className="py-12 text-right">
-      <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold mb-6">كل اللي محتاجه لنجاح بيزنسك</h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((f, idx) => (
-            <div 
-              key={idx} 
-              className="flex items-center gap-3 p-4 bg-white rounded-xl shadow hover:shadow-lg transition"
-            >
-              <span className="text-4xl">{f.icon}</span>
-              <p className="font-semibold">{f.title}</p>
-            </div>
-          ))}
+    <section className="py-20 bg-primary text-white">
+      <h2 className="text-center text-3xl font-bold mb-6">كل اللي محتاجه لنجاح بيزنسك</h2>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="feature-card">
+          <div className="icon">
+            {/* Add an icon */}
+          </div>
+          <p>محادثات 24/7</p>
+        </div>
+        <div className="feature-card">
+          <div className="icon">
+            {/* Add an icon */}
+          </div>
+          <p>إدارة الطلبات</p>
+        </div>
+        <div className="feature-card">
+          <div className="icon">
+            {/* Add an icon */}
+          </div>
+          <p>تقارير دقيقة</p>
         </div>
       </div>
     </section>
-  );
+  )
 }
+
+export default FeaturesSection
