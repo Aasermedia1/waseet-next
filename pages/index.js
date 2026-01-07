@@ -1,127 +1,82 @@
-// pages/index.js
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import Navbar from '../components/Navbar'; // ✅ ADD THIS LINE
-import styles from '../styles/Home.module.css'; // make sure this file exists
-import ChatDemo from '../components/ChatDemo'; // this is the animated widget
+import Navbar from '../components/Navbar';
+import styles from '../styles/Home.module.css';
+import ChatDemo from '../components/ChatDemo';
 
 export default function Home() {
   return (
     <>
       <Head>
         <title>وسيط | موظف مبيعاتك الذكي</title>
-        <meta name="description" content="وسيط - موظف مبيعات ذكي يعمل 24/7 على الواتساب. مناسب لأصحاب المشاريع الصغيرة في مصر." />
+        <meta name="description" content="وسيط — موظف مبيعاتك الذكي على الواتس، وفر وقتك وزوّد مبيعاتك مع موظف مبيعات ذكي يشتغل 24/7." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
       <main dir="rtl" className={styles.main}>
-          <Navbar />  
+        <Navbar />
+
+        {/* Hero Section */}
         <section className={styles.hero}>
           <div className={styles.heroText}>
-            <h1>وسيط — موظف مبيعاتك الذكي علي الواتس</h1>
-            <p>وفر وقتك وزوّد مبيعاتك مع موظف مبيعات ذكي يشتغل 24/7...</p>
+            <h1 className={styles.title}>مرحباً بك في وسيط</h1>
+            <p className={styles.subtitle}>ابدأ الآن واستفد من مزايا الذكاء الاصطناعي في مبيعاتك</p>
             <div className={styles.ctaButtons}>
-              <Link href="#pricing" className={styles.greenBtn}>ابدأ تجربتك المجانية</Link>
-              <Link href="#how-it-works" className={styles.outlineBtn}>شوف بيشتغل إزاي</Link>
+              <Link href="#pricing"><a className={styles.greenBtn}>ابدأ تجربتك المجانية</a></Link>
+              <Link href="#how-it-works"><a className={styles.outlineBtn}>ازاي بيشتغل؟</a></Link>
             </div>
             <ul className={styles.benefits}>
-              <li>✅ لهجة مصرية بطلاقة</li>
-              <li>✅ تحويل لموظف حقيقي</li>
-              <li>✅ مناسب للـSME</li>
+              <li>✅ زيادة مبيعاتك بسهولة</li>
+              <li>✅ تحويل المحادثات لمبيعات</li>
+              <li>✅ مناسب للشركات الصغيرة</li>
             </ul>
           </div>
-          <div className={styles.heroDemo}>
-            <ChatDemo />
+        </section>
+
+        {/* Chat Demo */}
+        <ChatDemo />
+
+        {/* How It Works */}
+        <section id="how-it-works" className="py-12 bg-gray-50 text-center">
+          <h2 className="text-3xl font-bold mb-6">كيف يشتغل وسيط؟</h2>
+          <p className="max-w-xl mx-auto text-lg text-gray-700">
+            وسيط هو بوت ذكي يرد على العملاء، يجاوب على الأسئلة، ويعرض منتجاتك ويأخذ الطلبات — 24/7 على واتساب.
+          </p>
+        </section>
+
+        {/* Pricing */}
+        <section id="pricing" className="py-12 text-center">
+          <h2 className="text-3xl font-bold mb-6">الباقات والأسعار</h2>
+          <div className="flex flex-col md:flex-row justify-center gap-6">
+            <div className="border p-6 rounded-lg shadow w-full md:w-1/3">
+              <h3 className="text-xl font-bold mb-2">المجانية</h3>
+              <p className="text-gray-700 mb-4">تجربة محدودة لمدة 7 أيام</p>
+              <p className="text-2xl font-bold mb-4">0 ر.س</p>
+              <Link href="#start"><a className="bg-green-600 text-white px-4 py-2 rounded">ابدأ الآن</a></Link>
+            </div>
+            <div className="border p-6 rounded-lg shadow w-full md:w-1/3 bg-green-50">
+              <h3 className="text-xl font-bold mb-2">الأساسية</h3>
+              <p className="text-gray-700 mb-4">كل ما تحتاجه للانطلاق</p>
+              <p className="text-2xl font-bold mb-4">99 ر.س / شهرياً</p>
+              <Link href="#start"><a className="bg-green-600 text-white px-4 py-2 rounded">اشترك الآن</a></Link>
+            </div>
           </div>
         </section>
 
-        {/* SECTION: المشاكل اللي بتواجهك */}
-        <section className={styles.problems}>
-          <h2>المشاكل اللي بتواجهك</h2>
-          <p>كل صاحب بيزنس صغير في مصر بيواجه نفس التحديات دي كل يوم</p>
-          <div className={styles.cards}>
-            <div>📩 الرسائل كثيرة</div>
-            <div>🌙 العمل ليلاً</div>
-            <div>💸 مبيعات ضائعة</div>
-            <div>🔁 تكرار الأسئلة</div>
-          </div>
+        {/* Contact */}
+        <section id="contact" className="py-12 bg-gray-50 text-center">
+          <h2 className="text-3xl font-bold mb-4">تواصل معنا</h2>
+          <p className="text-gray-700 mb-4">هل عندك استفسار؟ تواصل معنا مباشرة على الواتس أو البريد الإلكتروني.</p>
+          <a href="https://wa.me/966500000000" target="_blank" className="text-green-600 font-bold underline">
+            راسلنا على واتساب
+          </a>
         </section>
 
-        {/* SECTION: المميزات */}
-        <section className={styles.features}>
-          <h2>كل اللي محتاجه لنجاح بيزنسك</h2>
-          <p>وسيط مش بس بيرد على الرسائل، ده بيدير كل عملية البيع من أولها لآخرها</p>
-          <div className={styles.grid}>
-            <div>🤖 ردود تلقائية</div>
-            <div>📦 إدارة الطلبات</div>
-            <div>⏰ متاح 24/7</div>
-            <div>🔗 تكامل سلس</div>
-            <div>🎛️ تخصيص كامل</div>
-            <div>📊 تقارير وإحصائيات</div>
-          </div>
-        </section>
-
-        {/* SECTION: قصص نجاح */}
-        <section className={styles.success}>
-          <h2>أصحاب بيزنس زيك حققوا نتائج مذهلة</h2>
-          <p>اسمع من أصحاب الأعمال المصريين اللي استخدموا وسيط وغيروا طريقة شغلهم</p>
-          <div className={styles.metrics}>
-            <div>500+ صاحب بيزنس</div>
-            <div>50K+ رسالة</div>
-            <div>98% رضا</div>
-            <div>24/7 متاح</div>
-          </div>
-        </section>
-
-        {/* SECTION: الأسعار */}
-        <section id="pricing" className={styles.pricing}>
-          <h2>أسعار واضحة وشفافة</h2>
-          <p>باقة واحدة شاملة لكل احتياجاتك</p>
-          <div className={styles.pricingCard}>
-            <h3>195 جنيه / شهر</h3>
-            <ul>
-              <li>✅ 500 رسالة يومياً</li>
-              <li>✅ كل الميزات</li>
-            </ul>
-            <Link href="https://wa.me/201063595202" target="_blank" className={styles.greenBtn}>اشترك الآن</Link>
-          </div>
-        </section>
-
-        {/* SECTION: وسيط بيشتغل إزاي */}
-        <section id="how-it-works" className={styles.steps}>
-          <h2>وسيط بيشتغل إزاي؟</h2>
-          <div className={styles.stepList}>
-            <div>1️⃣ استقبال الرسائل</div>
-            <div>2️⃣ فهم وفلترة</div>
-            <div>3️⃣ عرض ومتابعة</div>
-          </div>
-        </section>
-
-        {/* SECTION: الأسئلة الشائعة */}
-        <section className={styles.faq}>
-          <h2>عندك أسئلة؟ عندنا إجابات</h2>
-          <details>
-            <summary>هل محتاج خبرة فنية؟</summary>
-            <p>ولا أي خبرة. وسيط سهل جداً.</p>
-          </details>
-          <details>
-            <summary>هل وسيط آمن؟</summary>
-            <p>100%، بياناتك مشفرة وآمنة.</p>
-          </details>
-        </section>
-
-        {/* SECTION: تواصل معنا */}
-        <section className={styles.contact}>
-          <h2>لسه عندك أسئلة؟</h2>
-          <p>فريقنا جاهز يساعدك على مدار الساعة</p>
-          <Link href="https://wa.me/201063595202" target="_blank" className={styles.greenBtn}>تواصل معنا على الواتساب</Link>
-        </section>
-
-        {/* FOOTER */}
-        <footer className={styles.footer}>
-          <Image src="/logo.png" alt="Logo" width={120} height={40} />
-          <p>© 2026 وسيط — منتج من <strong>AaserMedia</strong> لحلول الويب</p>
+        {/* Footer */}
+        <footer className="py-6 text-center text-sm text-gray-500">
+          <Image src="/logo.png" alt="Waseet Logo" width={30} height={30} className="mx-auto mb-2" />
+          <p>© 2026 وسيط — منتج من <span className="font-bold text-black">AaserMedia</span></p>
         </footer>
       </main>
     </>
