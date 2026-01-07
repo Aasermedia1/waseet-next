@@ -1,20 +1,20 @@
 // components/StatsSection.js
 export default function StatsSection() {
   const stats = [
-    { value: '24/7', label: 'متاح دائماً' },
-    { value: '98%', label: 'رضا العملاء' },
-    { value: '+50K', label: 'رسالة شهرياً' },
-    { value: '+500', label: 'عميل يستخدم وسيط' },
+    { label: '24/7', desc: 'يشتغل على مدار الساعة' },
+    { label: '98%', desc: 'معدل رضا العملاء' },
+    { label: '+50K', desc: 'رسالة مُدارة' },
+    { label: '+500', desc: 'عميل خدمناهم' },
   ];
 
   return (
-    <section dir="rtl" style={{ textAlign: 'center', padding: '4rem 1rem', background: '#f9f9f9' }}>
+    <section dir="rtl" style={{ padding: '4rem 1rem', backgroundColor: '#fff', textAlign: 'center' }}>
       <h2 style={{ fontSize: '1.8rem', marginBottom: '2rem' }}>أصحاب بيزنس زيك حققوا نتائج مذهلة</h2>
       <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap' }}>
-        {stats.map((item, index) => (
-          <div key={index} style={{ minWidth: '120px' }}>
-            <h3 style={{ fontSize: '1.5rem', color: '#00B26F', marginBottom: '0.5rem' }}>{item.value}</h3>
-            <p>{item.label}</p>
+        {stats.map((stat, index) => (
+          <div key={index} style={{ minWidth: '120px', background: '#f0fdf4', padding: '1rem', borderRadius: '10px' }}>
+            <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#16a34a' }}>{stat.label}</p>
+            <p>{stat.desc}</p>
           </div>
         ))}
       </div>
