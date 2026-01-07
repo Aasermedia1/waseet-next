@@ -1,61 +1,56 @@
-import { useEffect, useState } from "react";
-import Image from "next/image";
+// components/HeroSection.js
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
+
+const messages = [
+  "عميل: عندك المقاس الكبير؟",
+  "وسيط: نعم، موجود! تحب أضيفه للطلب؟",
+  "عميل: نعم رجاءً، شكراً.",
+  "وسيط: الطلب اتسجل! 😉",
+  "عميل: شكرا",
+  "عميل: تكلفة الشحن للإسماعيلية؟",
+  "وسيط: الشحن حيكون 50 جنيه ي فندم",
+];
 
 export default function HeroSection() {
-  const messages = [
-    "عميل: عندك المقاس الكبير؟",
-    "وسيط: نعم، موجود! تحب أضيفه للطلب؟",
-    "عميل: نعم رجاءً، شكراً.",
-    "وسيط: الطلب اتسجل! 😉",
-    "عميل: شكرا",
-    "عميل: تكلفة الشحن للإسماعيلية؟",
-    "وسيط: الشحن حيكون 50 جنيه ي فندم",
-  ];
   const [displayed, setDisplayed] = useState([]);
   const [typing, setTyping] = useState(false);
 
   useEffect(() => {
     let i = 0;
-    const nextMessage = () => {
+    const next = () => {
       if (i >= messages.length) return;
       setTyping(true);
       setTimeout(() => {
         setTyping(false);
         setDisplayed((prev) => [...prev, messages[i]]);
         i++;
-        setTimeout(nextMessage, 1400);
-      }, 900);
+        setTimeout(next, 1200);
+      }, 800);
     };
-    nextMessage();
+    next();
   }, []);
 
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center gap-8 px-4">
-        {/* Left - Image with chat overlay */}
+    <section className="py-20 bg-white">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 px-4">
+        {/* Left Chat Phone */}
         <div className="relative w-full lg:w-1/2 flex justify-center">
-          <Image
-            src="/new-phone.png"
-            alt="وسيط chat demo"
-            width={400}
-            height={800}
-          />
-          <div className="absolute top-24 left-1/4 w-2/3 h-3/4 overflow-hidden">
-            <div className="bg-white rounded-lg shadow-lg p-3 space-y-1">
+          <div className="relative w-80 h-[420px]">
+            <Image src="/new-phone.png" layout="fill" objectFit="contain" alt="Chat Demo" />
+            <div className="absolute top-16 left-4 right-4 h-3/4 overflow-hidden bg-white rounded-xl shadow-lg px-2 py-3 space-y-2">
               {displayed.map((msg, idx) => (
                 <div
                   key={idx}
-                  className={
-                    msg.startsWith("وسيط")
-                      ? "bg-green-100 text-green-800 rounded-lg px-3 py-1 self-start"
-                      : "bg-gray-100 text-gray-800 rounded-lg px-3 py-1 self-end"
-                  }
+                  className={`max-w-[90%] px-3 py-1 rounded-lg ${
+                    msg.startsWith("وسيط") ? "bg-green-100 ml-auto" : "bg-gray-100"
+                  }`}
                 >
                   {msg}
                 </div>
               ))}
               {typing && (
-                <div className="flex gap-1">
+                <div className="flex gap-1 ml-1">
                   <span className="dot animate-pulse">.</span>
                   <span className="dot animate-pulse">.</span>
                   <span className="dot animate-pulse">.</span>
@@ -65,26 +60,18 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Right - Text content */}
-        <div className="w-full lg:w-1/2 text-right">
-          <h1 className="text-3xl font-bold mb-4">
-            وسيط — موظف مبيعاتك الذكي على الواتس
-          </h1>
+        {/* Right Hero Text */}
+        <div className="lg:w-1/2 text-right">
+          <h1 className="text-4xl font-extrabold mb-4">وسيط — موظف مبيعاتك الذكي على الواتس</h1>
           <p className="text-lg text-gray-700 mb-6">
-            وفر وقتك وزوّد مبيعاتك مع موظف مبيعات ذكي يشتغل 24/7...
+            وفر وقتك وزوّد مبيعاتك مع موظف مبيعات ذكي يشتغل 24/7 على واتساب.
           </p>
 
-          <div className="flex gap-4 mb-4">
-            <a
-              href="#pricing"
-              className="bg-green-600 text-white px-5 py-2 rounded-md font-bold hover:bg-green-700 transition"
-            >
+          <div className="flex gap-4 mb-5">
+            <a href="#pricing" className="bg-green-600 text-white px-6 py-3 rounded-md font-bold hover:bg-green-700 transition">
               ابدأ تجربتك المجانية
             </a>
-            <a
-              href="#how-it-works"
-              className="border border-green-600 text-green-600 px-5 py-2 rounded-md font-bold hover:bg-green-50 transition"
-            >
+            <a href="#how-it-works" className="border border-green-600 text-green-600 px-6 py-3 rounded-md font-bold hover:bg-green-50 transition">
               شوف بيشتغل إزاي
             </a>
           </div>
