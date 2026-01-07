@@ -1,20 +1,17 @@
 // components/ContactCTA.js
-import React from 'react';
-
 export default function ContactCTA() {
   return (
-    <section className="bg-green-50 text-center py-16 px-4">
-      <h2 className="text-2xl md:text-3xl font-bold mb-4">تواصل معنا</h2>
-      <p className="text-lg mb-6">
-        هل عندك استفسار؟ تواصل معنا مباشرةً على الواتس أو البريد الإلكتروني.
+    <section className="py-12 bg-green-50 text-center text-right">
+      <h2 className="text-2xl font-bold mb-4">لسه عندك أسئلة؟</h2>
+      <p className="text-gray-700 mb-6">
+        فريقنا جاهز يساعدك على مدار الساعة — تواصل معنا على الواتساب.
       </p>
       <a
-        href="https://wa.me/201234567890"
+        href="https://wa.me/201063595202"
         target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700 transition"
+        className="bg-green-600 text-white px-6 py-3 rounded-md font-bold hover:bg-green-700 transition"
       >
-        واتس اب على طول
+        تواصل معنا على الواتساب
       </a>
     </section>
   );
