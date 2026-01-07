@@ -2,7 +2,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar'; // ✅ ADD THIS LINE
 import styles from '../styles/Home.module.css'; // make sure this file exists
 import ChatDemo from '../components/ChatDemo'; // this is the animated widget
 
