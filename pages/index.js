@@ -89,9 +89,3 @@ export default function Home() {
     </>
   );
 }
-
-const navStyle = {
-  textDecoration: 'none',
-  color: '#333',
-  fontSize: '1rem'
-};
