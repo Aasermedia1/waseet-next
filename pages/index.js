@@ -16,6 +16,15 @@ import Footer from '../components/Footer';
 export default function Home() {
   return (
     <>
+      <Navbar />
+      <main>
+        {/* Other sections coming here */}
+      </main>
+    </>
+  );
+}
+  return (
+    <>
       <Head>
         <title>وسيط — موظف مبيعاتك الذكي على واتس</title>
         <meta name="description" content="وفّر وقتك وزوّد مبيعاتك مع موظف مبيعات ذكي يشتغل 24/7 على واتساب بيزنس." />
