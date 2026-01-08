@@ -55,17 +55,16 @@ const featuresData = [
 
 export default function FeaturesSection() {
   const [openIndex, setOpenIndex] = useState(null);
-
   const toggleOpen = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section className="py-20 bg-white font-cairo">
+    <section className="py-20 bg-white font-cairo" dir="rtl">
       {/* Title */}
-      <div className="text-center mb-12 px-4">
+      <div className="text-center mb-10 px-4">
         <h2 className="text-sm text-green-600 font-semibold mb-2">المميزات</h2>
-        <h3 className="text-3xl font-bold text-gray-900 mb-2">
+        <h3 className="text-3xl font-bold text-gray-900 mb-1">
           كل اللي محتاجه لنجاح بيزنسك
         </h3>
         <p className="text-gray-700 max-w-xl mx-auto">
@@ -73,23 +72,23 @@ export default function FeaturesSection() {
         </p>
       </div>
 
-      {/* Content Grid */}
-      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-start">
+      {/* Content */}
+      <div className="container mx-auto px-4 flex flex-col lg:flex-row items-start gap-8">
         
-        {/* Left: Features Image */}
-        <div className="flex justify-center lg:justify-start">
+        {/* Left: Bigger Image */}
+        <div className="flex-shrink-0 w-full lg:w-1/2 flex justify-center lg:justify-start">
           <img
             src="/hand.png"
-            alt="Features"
-            className="w-full max-w-xs lg:max-w-lg object-cover"
+            alt="Features Visual"
+            className="w-full max-w-md lg:max-w-xl object-contain"
           />
         </div>
 
         {/* Right: Accordion */}
-        <div className="space-y-4 text-right">
+        <div className="w-full lg:w-1/2 space-y-4">
           {featuresData.map((item, idx) => (
-            <div key={idx} className="border rounded-lg overflow-hidden">
-              {/* Accordion Header */}
+            <div key={idx} className="border rounded-lg overflow-hidden text-right">
+              {/* Header */}
               <button
                 onClick={() => toggleOpen(idx)}
                 className={`w-full flex items-center justify-between px-6 py-4 font-semibold text-lg ${
@@ -107,7 +106,7 @@ export default function FeaturesSection() {
                 </span>
               </button>
 
-              {/* Accordion Content */}
+              {/* Content */}
               {openIndex === idx && (
                 <div className="px-6 py-4 bg-green-50 text-gray-800">
                   <ul className="list-disc list-inside space-y-2">
