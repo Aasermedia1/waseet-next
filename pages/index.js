@@ -10,7 +10,7 @@ export default function Home() {
       <Hero />
       <ProblemsSection />
       <FeaturesSection />
-      {/* …other sections */}
+      {/* Next sections ... */}
     </>
   );
 }
