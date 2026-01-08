@@ -16,11 +16,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav
-      className={`w-full top-0 z-50 transition-shadow duration-300 ${
-        isSticky ? "fixed shadow-xl bg-white" : "bg-transparent"
-      }`}
-    >
+    <nav className="w-full bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           
