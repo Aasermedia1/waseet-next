@@ -1,17 +1,25 @@
-import HeroSection from '@/components/HeroSection'
-import FeaturesSection from '@/components/FeaturesSection'
-import ProblemsSection from '@/components/ProblemsSection'
-import BenefitsSection from '@/components/BenefitsSection'
-import SuccessStoriesSection from '@/components/SuccessStoriesSection'
+import Navbar from "../components/Navbar"
+import Hero from "../components/Hero"
+import ProblemsSection from "../components/ProblemsSection"
+import FeaturesSection from "../components/FeaturesSection"
+import SuccessStories from "../components/SuccessStories"
 
 export default function Home() {
   return (
-    <div dir="rtl">
-      <HeroSection />
+    <>
+      <Navbar />
+
+      {/* Hero Section */}
+      <Hero />
+
+      {/* Problems Section */}
       <ProblemsSection />
+
+      {/* Features Section */}
       <FeaturesSection />
-      <BenefitsSection />
-      <SuccessStoriesSection />
-    </div>
+
+      {/* Success Stories Section */}
+      <SuccessStories />
+    </>
   )
 }
