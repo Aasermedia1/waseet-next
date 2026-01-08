@@ -1,9 +1,9 @@
-import Navbar from "../components/Navbar"
-import Hero from "../components/Hero"
-import ProblemsSection from "../components/ProblemsSection"
-import FeaturesSection from "../components/FeaturesSection"
-import TrustSection.js from "../components/FeaturesSection"
-import SuccessStories from "../components/SuccessStories"
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import ProblemsSection from "../components/ProblemsSection";
+import FeaturesSection from "../components/FeaturesSection";
+import TrustSection from "../components/TrustSection";
+import SuccessStories from "../components/SuccessStories";
 
 export default function Home() {
   return (
@@ -16,11 +16,14 @@ export default function Home() {
       {/* Problems Section */}
       <ProblemsSection />
 
-      {/* Features Section */}
+      {/* Features Section (Accordion + Image) */}
       <FeaturesSection />
+
+      {/* Trust Section */}
+      <TrustSection />
 
       {/* Success Stories Section */}
       <SuccessStories />
     </>
-  )
+  );
 }
