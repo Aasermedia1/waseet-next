@@ -7,33 +7,20 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-white shadow-md">
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between rtl:flex-row-reverse">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
 
-        {/* ===== Logo & Brand (Right) ===== */}
-        <div className="flex items-center space-x-2 rtl:space-x-reverse">
-          <Image
-            src="/logo.svg"
-            alt="Waseet Logo"
-            width={48}
-            height={48}
-            className="object-contain"
-          />
-          <div className="text-right">
-            <div className="font-bold text-xl text-gray-800">وسيط</div>
-            <div className="text-sm text-gray-500">Waseet</div>
-          </div>
+        {/* ===== MOBILE: Hamburger on LEFT ===== */}
+        <div className="md:hidden order-1">
+          <button
+            onClick={() => setOpen(!open)}
+            className="text-gray-800 text-xl focus:outline-none"
+          >
+            {open ? "✕" : "☰"}
+          </button>
         </div>
 
-        {/* ===== Desktop Navigation (Center) ===== */}
-        <div className="hidden md:flex items-center space-x-8 rtl:space-x-reverse font-bold text-gray-700">
-          <Link href="#home"><a className="hover:text-green-600 transition">الرئيسية</a></Link>
-          <Link href="#how"><a className="hover:text-green-600 transition">إزاي بيشتغل</a></Link>
-          <Link href="#pricing"><a className="hover:text-green-600 transition">الأسعار</a></Link>
-          <Link href="#contact"><a className="hover:text-green-600 transition">تواصل معانا</a></Link>
-        </div>
-
-        {/* ===== Desktop CTA Button (Left) ===== */}
-        <div className="hidden md:block">
+        {/* ===== CTA Button on DESKTOP (LEFT) ===== */}
+        <div className="hidden md:block order-1">
           <a
             href="#trial"
             className="bg-green-600 text-white font-bold px-5 py-2 rounded-lg hover:bg-green-700 transition"
@@ -42,14 +29,27 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* ===== Mobile: Hamburger ===== */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setOpen(!open)}
-            className="text-gray-800 text-xl focus:outline-none"
-          >
-            {open ? "✕" : "☰"}
-          </button>
+        {/* ===== NAV LINKS Center ===== */}
+        <div className="hidden md:flex items-center space-x-8 rtl:space-x-reverse font-bold text-gray-700 order-2">
+          <Link href="#home"><a className="hover:text-green-600 transition">الرئيسية</a></Link>
+          <Link href="#how"><a className="hover:text-green-600 transition">إزاي بيشتغل</a></Link>
+          <Link href="#pricing"><a className="hover:text-green-600 transition">الأسعار</a></Link>
+          <Link href="#contact"><a className="hover:text-green-600 transition">تواصل معانا</a></Link>
+        </div>
+
+        {/* ===== Logo + Brand on RIGHT (Desktop & Mobile) ===== */}
+        <div className="flex items-center space-x-2 rtl:space-x-reverse text-right order-3">
+          <div className="leading-tight">
+            <div className="font-bold text-xl text-gray-800">وسيط</div>
+            <div className="text-sm text-gray-500">Waseet</div>
+          </div>
+          <Image
+            src="/logo.svg"
+            alt="Waseet Logo"
+            width={48}
+            height={48}
+            className="object-contain"
+          />
         </div>
       </div>
 
