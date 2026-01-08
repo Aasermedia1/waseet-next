@@ -15,8 +15,8 @@ const featuresData = [
     title: "إدارة الطلبات",
     icon: "📦",
     bullets: [
-      "استقبال وتنظيم الطلبات تلقائياً مع تأكيد التفاصيل وحساب التكلفة",
-      "تأكيد الطلبات تلقائياً",
+      "استقبال وتنظيم الطلبات تلقائيًا مع تأكيد التفاصيل وحساب التكلفة",
+      "تأكيد الطلبات تلقائيًا",
       "حساب الأسعار والتوصيل",
       "تتبع حالة الطلب",
     ],
@@ -35,9 +35,9 @@ const featuresData = [
     title: "تقارير وإحصائيات",
     icon: "📊",
     bullets: [
-      "متابعة أداء مبيعاتك وفهم عملائك أكتر من خلال تقارير تفصيلية",
+      "متابعة أداء مبيعاتك وفهم عملائك أكثر من خلال تقارير تفصيلية",
       "عدد الرسائل والطلبات",
-      "أكثر المنتجات مبيعاً",
+      "أكثر المنتجات مبيعًا",
       "أوقات الذروة",
     ],
   },
@@ -73,32 +73,30 @@ export default function FeaturesSection() {
         </p>
       </div>
 
+      {/* Content Grid */}
       <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-start">
-
-        {/* Left – Image */}
-        <div className="flex justify-center lg:justify-end">
+        
+        {/* Left: Features Image */}
+        <div className="flex justify-center lg:justify-start">
           <img
-            src="/features-image.png"
-            alt="Features Graphic"
-            className="w-full max-w-md lg:max-w-none object-cover"
+            src="/hand.png"
+            alt="Features"
+            className="w-full max-w-xs lg:max-w-lg object-cover"
           />
         </div>
 
-        {/* Right – Accordion */}
-        <div className="space-y-4">
+        {/* Right: Accordion */}
+        <div className="space-y-4 text-right">
           {featuresData.map((item, idx) => (
-            <div
-              key={idx}
-              className={`border rounded-lg overflow-hidden transition-all duration-300 ${
-                openIndex === idx ? "bg-green-50" : "bg-white"
-              }`}
-            >
-              {/* Header */}
+            <div key={idx} className="border rounded-lg overflow-hidden">
+              {/* Accordion Header */}
               <button
                 onClick={() => toggleOpen(idx)}
-                className={`w-full flex items-center justify-between px-6 py-4 text-right ${
-                  openIndex === idx ? "bg-green-600 text-white" : "bg-white text-gray-800"
-                } font-bold text-lg`}
+                className={`w-full flex items-center justify-between px-6 py-4 font-semibold text-lg ${
+                  openIndex === idx
+                    ? "bg-green-600 text-white"
+                    : "bg-white text-gray-800"
+                }`}
               >
                 <div className="flex items-center space-x-3 rtl:space-x-reverse">
                   <span className="text-xl">{item.icon}</span>
@@ -109,10 +107,10 @@ export default function FeaturesSection() {
                 </span>
               </button>
 
-              {/* Content */}
+              {/* Accordion Content */}
               {openIndex === idx && (
                 <div className="px-6 py-4 bg-green-50 text-gray-800">
-                  <ul className="space-y-2 list-disc list-inside">
+                  <ul className="list-disc list-inside space-y-2">
                     {item.bullets.map((b, i) => (
                       <li key={i}>{b}</li>
                     ))}
@@ -122,6 +120,7 @@ export default function FeaturesSection() {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
