@@ -76,11 +76,14 @@ export default function FeaturesSection() {
       <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-8 items-start" dir="rtl">
   {/* Image RIGHT (1st column for RTL) */}
   <div className="flex justify-center lg:order-2">
-    <img
-      src="/hand.png"
-      alt="Features Graphic"
-      className="w-full max-w-sm md:max-w-md lg:max-w-xl object-cover"
-    />
+   <div className="flex justify-center lg:justify-end">
+  <img
+    src="/hand.png" // ✅ CORRECT path for image inside /public
+    alt="Features Visual"
+    className="w-full max-w-sm md:max-w-md lg:max-w-xl object-contain"
+  />
+</div>
+
   </div>
 
   {/* Accordion LEFT (2nd column for RTL) */}
