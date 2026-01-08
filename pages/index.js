@@ -7,7 +7,8 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-      {/* next sections below */}
+      <ProblemsSection />
+      {/* next sections... */}
     </>
   );
 }
