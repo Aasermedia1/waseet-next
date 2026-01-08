@@ -16,53 +16,30 @@ export default function Hero() {
 
   useEffect(() => {
     let idx = 0;
-    function nextMsg() {
+    function next() {
       setTyping(true);
       setTimeout(() => {
         setTyping(false);
-        setShown(prev => [...prev, messages[idx]]);
+        setShown((prev) => [...prev, messages[idx]]);
         idx++;
         if (idx < messages.length) {
-          setTimeout(nextMsg, 1000);
+          setTimeout(next, 1000);
         }
       }, 1200);
     }
-    nextMsg();
+    next();
   }, []);
 
   return (
     <section id="home" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-8 items-start">
 
-        {/* Right — Text + CTAs + Benefits */}
-        <div className="text-right lg:text-right">
-          <div className="text-sm text-green-600 font-semibold mb-2">وكيل مبيعات ذكي للواتساب</div>
-          <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">
-            وسيط — موظف مبيعاتك الذكي على الواتس
-          </h1>
-          <p className="text-lg text-gray-700 mb-6">
-            وفر وقتك وزوّد مبيعاتك مع موظف مبيعات ذكي يشتغل 24/7 …
-          </p>
-          <div className="flex flex-wrap gap-3 mb-6">
-            <a href="#trial" className="bg-green-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-green-700 transition">
-              ابدأ تجربتك المجانية
-            </a>
-            <a href="#how" className="border border-green-600 text-green-600 font-bold px-6 py-3 rounded-lg hover:bg-green-50 transition">
-              شوف بيشتغل إزاي
-            </a>
-          </div>
-          <ul className="space-y-2 text-gray-800 font-semibold">
-            <li>✓ لهجة مصرية بطلاقة</li>
-            <li>✓ تحويل لموظف حقيقي</li>
-            <li>✓ مناسب للـSME</li>
-          </ul>
-        </div>
-
-        {/* Left — Chat Widget */}
-        <div className="mx-auto w-full max-w-md">
+        {/* Chat Widget (LEFT on desktop) */}
+        <div className="order-2 lg:order-1 mx-auto w-full max-w-lg">
           <div className="bg-white rounded-xl shadow-lg border border-gray-200">
-            {/* Header */}
-            <div className="bg-green-600 text-white py-2 text-center font-bold text-lg">متصل الآن — وسيط</div>
+            <div className="bg-green-600 text-white py-2 text-center font-bold text-lg">
+              متصل الآن — وسيط
+            </div>
 
             {/* Chat Body */}
             <div className="h-[420px] p-4 overflow-auto flex flex-col gap-3">
@@ -70,7 +47,9 @@ export default function Hero() {
                 <div
                   key={i}
                   className={`max-w-[80%] px-3 py-2 rounded-lg ${
-                    i % 2 === 0 ? "self-start bg-gray-200 text-gray-800" : "self-end bg-green-100 text-gray-800"
+                    i % 2 === 0
+                      ? "self-start bg-gray-200 text-gray-800"
+                      : "self-end bg-green-100 text-gray-800"
                   }`}
                 >
                   {msg}
@@ -94,6 +73,42 @@ export default function Hero() {
               />
             </div>
           </div>
+        </div>
+
+        {/* Hero Text + Buttons (RIGHT on desktop) */}
+        <div className="text-right order-1 lg:order-2">
+          <div className="text-sm text-green-600 font-semibold mb-2">
+            وكيل مبيعات ذكي للواتساب
+          </div>
+          <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">
+            وسيط — موظف مبيعاتك الذكي على الواتس
+          </h1>
+          <p className="text-lg text-gray-700 mb-6">
+            وفر وقتك وزوّد مبيعاتك مع موظف مبيعات ذكي يشتغل 24/7 …
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-wrap gap-3 mb-6">
+            <a
+              href="#trial"
+              className="bg-green-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-green-700 transition"
+            >
+              ابدأ تجربتك المجانية
+            </a>
+            <a
+              href="#how"
+              className="border border-green-600 text-green-600 font-bold px-6 py-3 rounded-lg hover:bg-green-50 transition"
+            >
+              شوف بيشتغل إزاي
+            </a>
+          </div>
+
+          {/* Benefits */}
+          <ul className="space-y-2 text-gray-800 font-semibold">
+            <li>✓ لهجة مصرية بطلاقة</li>
+            <li>✓ تحويل لموظف حقيقي</li>
+            <li>✓ مناسب للـSME</li>
+          </ul>
         </div>
 
       </div>
