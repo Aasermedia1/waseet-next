@@ -1,7 +1,8 @@
 export default function Home() {
   return (
-    <div>
-      {/* Waseet landing page will be built here */}
+    <div className="min-h-screen flex items-center justify-center text-gray-700 text-xl">
+      {/* 🧼 Waseet landing page will be built here from scratch */}
+      وسيط — صفحة نظيفة وجاهزة للبناء من جديد
     </div>
   );
 }
