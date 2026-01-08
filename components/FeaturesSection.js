@@ -73,7 +73,7 @@ export default function FeaturesSection() {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 flex flex-col lg:flex-row items-start gap-8">
+      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-8 items-start flex-row-reverse">
         
         {/* Left: Bigger Image */}
         <div className="flex-shrink-0 w-full lg:w-1/2 flex justify-center lg:justify-start">
