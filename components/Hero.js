@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const chatMessages = [
+const messages = [
   "أهلاً يا فندم 👋 تحب تسأل عن إيه؟",
   "عايز أعرف سعر المنتج ده… وفيه خصم؟",
   "تمام يا فندم ✅ السعر 249 جنيه. تحب أخدلك قطعتين وفيه خصم 10%؟",
@@ -11,52 +11,72 @@ const chatMessages = [
 ];
 
 export default function Hero() {
-  const [displayedMessages, setDisplayedMessages] = useState([]);
-  const [typingIdx, setTypingIdx] = useState(0);
-  const [showTyping, setShowTyping] = useState(false);
+  const [shown, setShown] = useState([]);
+  const [typing, setTyping] = useState(false);
 
   useEffect(() => {
-    let msgIdx = 0;
-    function showNext() {
-      setShowTyping(true);
+    let idx = 0;
+    function nextMsg() {
+      setTyping(true);
       setTimeout(() => {
-        setShowTyping(false);
-        setDisplayedMessages((prev) => [...prev, chatMessages[msgIdx]]);
-        msgIdx++;
-        if (msgIdx < chatMessages.length) {
-          setTimeout(showNext, 1000);
+        setTyping(false);
+        setShown(prev => [...prev, messages[idx]]);
+        idx++;
+        if (idx < messages.length) {
+          setTimeout(nextMsg, 1000);
         }
       }, 1200);
     }
-    showNext();
+    nextMsg();
   }, []);
 
   return (
-    <section className="pt-20 pb-16 bg-gray-50">
-      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-8 items-center">
-        
-        {/* Left: Chat Widget */}
-        <div className="relative mx-auto w-full max-w-md">
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+    <section id="home" className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-8 items-start">
+
+        {/* Right — Text + CTAs + Benefits */}
+        <div className="text-right lg:text-right">
+          <div className="text-sm text-green-600 font-semibold mb-2">وكيل مبيعات ذكي للواتساب</div>
+          <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">
+            وسيط — موظف مبيعاتك الذكي على الواتس
+          </h1>
+          <p className="text-lg text-gray-700 mb-6">
+            وفر وقتك وزوّد مبيعاتك مع موظف مبيعات ذكي يشتغل 24/7 …
+          </p>
+          <div className="flex flex-wrap gap-3 mb-6">
+            <a href="#trial" className="bg-green-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-green-700 transition">
+              ابدأ تجربتك المجانية
+            </a>
+            <a href="#how" className="border border-green-600 text-green-600 font-bold px-6 py-3 rounded-lg hover:bg-green-50 transition">
+              شوف بيشتغل إزاي
+            </a>
+          </div>
+          <ul className="space-y-2 text-gray-800 font-semibold">
+            <li>✓ لهجة مصرية بطلاقة</li>
+            <li>✓ تحويل لموظف حقيقي</li>
+            <li>✓ مناسب للـSME</li>
+          </ul>
+        </div>
+
+        {/* Left — Chat Widget */}
+        <div className="mx-auto w-full max-w-md">
+          <div className="bg-white rounded-xl shadow-lg border border-gray-200">
             {/* Header */}
-            <div className="bg-green-600 text-white py-2 px-4 font-bold text-center text-lg">
-              متصل الآن — وسيط
-            </div>
+            <div className="bg-green-600 text-white py-2 text-center font-bold text-lg">متصل الآن — وسيط</div>
+
             {/* Chat Body */}
-            <div className="h-80 p-4 overflow-y-auto flex flex-col gap-3">
-              {displayedMessages.map((msg, i) => (
+            <div className="h-[420px] p-4 overflow-auto flex flex-col gap-3">
+              {shown.map((msg, i) => (
                 <div
                   key={i}
                   className={`max-w-[80%] px-3 py-2 rounded-lg ${
-                    i % 2 === 0
-                      ? "self-start bg-gray-200 text-gray-800"
-                      : "self-end bg-green-100 text-gray-800"
+                    i % 2 === 0 ? "self-start bg-gray-200 text-gray-800" : "self-end bg-green-100 text-gray-800"
                   }`}
                 >
                   {msg}
                 </div>
               ))}
-              {showTyping && (
+              {typing && (
                 <div className="self-start bg-gray-200 px-3 py-2 rounded-lg inline-flex">
                   <span className="dot"></span>
                   <span className="dot delay-200"></span>
@@ -76,51 +96,9 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right: Hero Text & CTAs */}
-        <div className="text-right">
-          <div className="text-sm text-green-600 font-semibold mb-2 inline-block">
-            وكيل مبيعات ذكي للواتساب
-          </div>
-          <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">
-            وسيط — موظف مبيعاتك الذكي على الواتس
-          </h1>
-          <p className="text-lg text-gray-700 mb-6">
-            وفر وقتك وزوّد مبيعاتك مع موظف مبيعات ذكي يشتغل 24/7 …
-          </p>
-
-          {/* CTAs */}
-          <div className="flex flex-wrap gap-3 mb-6">
-            <a
-              href="#trial"
-              className="bg-green-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-green-700 transition"
-            >
-              ابدأ تجربتك المجانية
-            </a>
-            <a
-              href="#how"
-              className="border border-green-600 text-green-600 font-bold px-6 py-3 rounded-lg hover:bg-green-50 transition"
-            >
-              شوف بيشتغل إزاي
-            </a>
-          </div>
-
-          {/* Benefits */}
-          <ul className="space-y-2 text-gray-800 font-semibold">
-            <li className="flex items-center gap-2">
-              ✓ لهجة مصرية بطلاقة
-            </li>
-            <li className="flex items-center gap-2">
-              ✓ تحويل لموظف حقيقي
-            </li>
-            <li className="flex items-center gap-2">
-              ✓ مناسب للـSME
-            </li>
-          </ul>
-        </div>
-
       </div>
 
-      {/* Animation for typing dots */}
+      {/* Typing dots animation */}
       <style jsx>{`
         .dot {
           width: 6px;
@@ -131,12 +109,8 @@ export default function Hero() {
           display: inline-block;
           animation: blink 1.4s infinite;
         }
-        .delay-200 {
-          animation-delay: 0.2s;
-        }
-        .delay-400 {
-          animation-delay: 0.4s;
-        }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
         @keyframes blink {
           0%, 80%, 100% { opacity: 0; }
           40% { opacity: 1; }
