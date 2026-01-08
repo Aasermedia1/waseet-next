@@ -73,16 +73,22 @@ export default function FeaturesSection() {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-8 items-start flex-row-reverse">
-        
-        {/* Left: Bigger Image */}
-        <div className="flex-shrink-0 w-full lg:w-1/2 flex justify-center lg:justify-start">
-          <img
-            src="/hand.png"
-            alt="Features Visual"
-            className="w-full max-w-md lg:max-w-xl object-contain"
-          />
-        </div>
+      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-8 items-start" dir="rtl">
+  {/* Image RIGHT (1st column for RTL) */}
+  <div className="flex justify-center lg:order-2">
+    <img
+      src="/hand.png"
+      alt="Features Graphic"
+      className="w-full max-w-sm md:max-w-md lg:max-w-xl object-cover"
+    />
+  </div>
+
+  {/* Accordion LEFT (2nd column for RTL) */}
+  <div className="space-y-4 text-right lg:order-1">
+    {/* Accordion logic here... */}
+  </div>
+</div>
+
 
         {/* Right: Accordion */}
         <div className="w-full lg:w-1/2 space-y-4">
