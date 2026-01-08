@@ -7,28 +7,24 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-white shadow-md">
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between rtl:flex-row-reverse">
 
-        {/* MOBILE: Hamburger on Left */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setOpen(!open)}
-            className="text-gray-800 text-xl focus:outline-none"
-          >
-            {open ? "✕" : "☰"}
-          </button>
-        </div>
-
-        {/* Logo + Name (RIGHT on mobile) */}
+        {/* ===== Logo & Brand (Right) ===== */}
         <div className="flex items-center space-x-2 rtl:space-x-reverse">
-          <Image src="/logo.svg" alt="Waseet Logo" width={45} height={45} />
-          <div className="leading-tight text-right">
+          <Image
+            src="/logo.svg"
+            alt="Waseet Logo"
+            width={48}
+            height={48}
+            className="object-contain"
+          />
+          <div className="text-right">
             <div className="font-bold text-xl text-gray-800">وسيط</div>
             <div className="text-sm text-gray-500">Waseet</div>
           </div>
         </div>
 
-        {/* Desktop Navigation */}
+        {/* ===== Desktop Navigation (Center) ===== */}
         <div className="hidden md:flex items-center space-x-8 rtl:space-x-reverse font-bold text-gray-700">
           <Link href="#home"><a className="hover:text-green-600 transition">الرئيسية</a></Link>
           <Link href="#how"><a className="hover:text-green-600 transition">إزاي بيشتغل</a></Link>
@@ -36,7 +32,7 @@ export default function Navbar() {
           <Link href="#contact"><a className="hover:text-green-600 transition">تواصل معانا</a></Link>
         </div>
 
-        {/* Desktop CTA Button */}
+        {/* ===== Desktop CTA Button (Left) ===== */}
         <div className="hidden md:block">
           <a
             href="#trial"
@@ -46,11 +42,20 @@ export default function Navbar() {
           </a>
         </div>
 
+        {/* ===== Mobile: Hamburger ===== */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setOpen(!open)}
+            className="text-gray-800 text-xl focus:outline-none"
+          >
+            {open ? "✕" : "☰"}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* ===== Mobile Menu ===== */}
       {open && (
-        <div className="md:hidden bg-white border-t border-gray-200 text-right font-bold space-y-2 px-4 py-3">
+        <div className="md:hidden bg-white border-t border-gray-200 text-right font-bold px-4 py-3 space-y-2">
           <Link href="#home"><a className="block hover:text-green-600">الرئيسية</a></Link>
           <Link href="#how"><a className="block hover:text-green-600">إزاي بيشتغل</a></Link>
           <Link href="#pricing"><a className="block hover:text-green-600">الأسعار</a></Link>
@@ -63,7 +68,6 @@ export default function Navbar() {
           </a>
         </div>
       )}
-
     </nav>
   );
 }
