@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 
 const featuresData = [
   {
@@ -62,9 +63,9 @@ export default function FeaturesSection() {
   return (
     <section className="py-20 bg-white font-cairo" dir="rtl">
       {/* Title */}
-      <div className="text-center mb-10 px-4">
+      <div className="text-center mb-12 px-4">
         <h2 className="text-sm text-green-600 font-semibold mb-2">المميزات</h2>
-        <h3 className="text-3xl font-bold text-gray-900 mb-1">
+        <h3 className="text-3xl font-bold text-gray-900 mb-2">
           كل اللي محتاجه لنجاح بيزنسك
         </h3>
         <p className="text-gray-700 max-w-xl mx-auto">
@@ -72,32 +73,22 @@ export default function FeaturesSection() {
         </p>
       </div>
 
-      {/* Content */}
-      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-8 items-start" dir="rtl">
-  {/* Image RIGHT (1st column for RTL) */}
-  <div className="flex justify-center lg:order-2">
-   <div className="flex justify-center lg:justify-end">
-  <img
-    src="/hand.png" // ✅ CORRECT path for image inside /public
-    alt="Features Visual"
-    className="w-full max-w-sm md:max-w-md lg:max-w-xl object-contain"
-  />
-</div>
+      <div className="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-start">
+        {/* IMAGE on LEFT */}
+        <div className="flex justify-center lg:justify-start">
+          <Image
+            src="/hand.png"
+            alt="Features Graphic"
+            width={500}
+            height={500}
+            className="object-contain"
+          />
+        </div>
 
-  </div>
-
-  {/* Accordion LEFT (2nd column for RTL) */}
-  <div className="space-y-4 text-right lg:order-1">
-    {/* Accordion logic here... */}
-  </div>
-</div>
-
-
-        {/* Right: Accordion */}
-        <div className="w-full lg:w-1/2 space-y-4">
+        {/* ACCORDION on RIGHT */}
+        <div className="space-y-4 text-right lg:order-2">
           {featuresData.map((item, idx) => (
-            <div key={idx} className="border rounded-lg overflow-hidden text-right">
-              {/* Header */}
+            <div key={idx} className="border rounded-lg overflow-hidden">
               <button
                 onClick={() => toggleOpen(idx)}
                 className={`w-full flex items-center justify-between px-6 py-4 font-semibold text-lg ${
@@ -110,12 +101,8 @@ export default function FeaturesSection() {
                   <span className="text-xl">{item.icon}</span>
                   <span>{item.title}</span>
                 </div>
-                <span className="text-xl">
-                  {openIndex === idx ? "-" : "+"}
-                </span>
+                <span className="text-xl">{openIndex === idx ? "-" : "+"}</span>
               </button>
-
-              {/* Content */}
               {openIndex === idx && (
                 <div className="px-6 py-4 bg-green-50 text-gray-800">
                   <ul className="list-disc list-inside space-y-2">
@@ -128,7 +115,6 @@ export default function FeaturesSection() {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
