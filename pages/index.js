@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
-      {/* Other sections go below */}
+      {/* More sections next */}
     </>
   );
 }
