@@ -7,9 +7,19 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-white shadow-md">
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between rtl:flex-row-reverse">
+      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
 
-        {/* ===== Logo & Brand (Right) ===== */}
+        {/* ===== MOBILE: Hamburger on LEFT ===== */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setOpen(!open)}
+            className="text-gray-800 text-xl focus:outline-none"
+          >
+            {open ? "✕" : "☰"}
+          </button>
+        </div>
+
+        {/* ===== Logo & Brand ===== */}
         <div className="flex items-center space-x-2 rtl:space-x-reverse">
           <Image
             src="/logo.svg"
@@ -24,7 +34,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* ===== Desktop Navigation (Center) ===== */}
+        {/* ===== Desktop Navigation ===== */}
         <div className="hidden md:flex items-center space-x-8 rtl:space-x-reverse font-bold text-gray-700">
           <Link href="#home"><a className="hover:text-green-600 transition">الرئيسية</a></Link>
           <Link href="#how"><a className="hover:text-green-600 transition">إزاي بيشتغل</a></Link>
@@ -32,7 +42,7 @@ export default function Navbar() {
           <Link href="#contact"><a className="hover:text-green-600 transition">تواصل معانا</a></Link>
         </div>
 
-        {/* ===== Desktop CTA Button (Left) ===== */}
+        {/* ===== Desktop CTA Button (Right) ===== */}
         <div className="hidden md:block">
           <a
             href="#trial"
@@ -42,15 +52,6 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* ===== Mobile: Hamburger ===== */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setOpen(!open)}
-            className="text-gray-800 text-xl focus:outline-none"
-          >
-            {open ? "✕" : "☰"}
-          </button>
-        </div>
       </div>
 
       {/* ===== Mobile Menu ===== */}
