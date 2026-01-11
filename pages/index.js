@@ -3,13 +3,11 @@ import Hero from "../components/Hero"
 import ProblemsSection from "../components/ProblemsSection"
 import FeaturesSection from "../components/FeaturesSection"
 import TrustSection from "../components/TrustSection"
-import ClientsReviews from "../components/ClientsReviews"
 import SuccessStories from "../components/SuccessStories"
 
 export default function Home() {
   return (
     <>
-      {/* Navigation Bar */}
       <Navbar />
 
       {/* Hero Section */}
@@ -18,16 +16,13 @@ export default function Home() {
       {/* Problems Section */}
       <ProblemsSection />
 
-      {/* Features Section */}
+      {/* Features Section (Accordion + Image) */}
       <FeaturesSection />
 
-      {/* Trust Section */}
+      {/* Trust Section (Stats) */}
       <TrustSection />
 
-      {/* Clients Reviews Carousel */}
-      <ClientsReviews />
-
-      {/* Success Stories / Stats */}
+      {/* Success Stories Section (Testimonials, etc.) */}
       <SuccessStories />
     </>
   )
