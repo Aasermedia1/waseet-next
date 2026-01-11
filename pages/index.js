@@ -2,6 +2,25 @@ import Navbar from "../components/Navbar"
 import Hero from "../components/Hero"
 import ProblemsSection from "../components/ProblemsSection"
 import FeaturesSection from "../components/FeaturesSection"
+import ClientsReviews from "../components/ClientsReviews";
+
+export default function Home() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <ProblemsSection />
+      <FeaturesSection />
+      <TrustSection />
+
+      {/* Clients Reviews Carousel */}
+      <ClientsReviews />
+
+      <SuccessStories />
+    </>
+  );
+}
+
 import TrustSection from "../components/TrustSection"
 import SuccessStories from "../components/SuccessStories"
 
