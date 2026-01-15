@@ -11,31 +11,31 @@ import PricingSection from "../components/PricingSection";
 export default function Home() {
   return (
     <>
-      {/* Navbar */}
+      {/* — NAVIGATION — */}
       <Navbar />
 
-      {/* Hero Section */}
+      {/* — HERO — */}
       <Hero />
 
-      {/* Problems / Challenges */}
+      {/* — PROBLEMS SECTION — */}
       <ProblemsSection />
 
-      {/* Features / المميزات */}
+      {/* — FEATURES (المميزات) — */}
       <FeaturesSection />
 
-      {/* Trust Section */}
+      {/* — TRUST SECTION — */}
       <TrustSection />
 
-      {/* Success Stories */}
+      {/* — SUCCESS STORIES (قصص نجاح) — */}
       <SuccessStories />
 
-      {/* Client Testimonials */}
+      {/* — TESTIMONIALS (آراء عملائنا) — */}
       <TestimonialsSection />
 
-      {/* FAQ */}
+      {/* — FAQ (الأسئلة الشائعة) — */}
       <FAQSection />
 
-      {/* ✅ Pricing Section (now back and visible!) */}
+      {/* — PRICING (الأسعار) — */}
       <PricingSection />
     </>
   );
