@@ -13,25 +13,25 @@ export default function Home() {
       {/* Navbar */}
       <Navbar />
 
-      {/* Hero / Welcome */}
+      {/* Hero */}
       <Hero />
 
-      {/* Problems / Challenges */}
+      {/* Problems (مشاكل تواجهك) */}
       <ProblemsSection />
 
-      {/* Features (Accordion + Image) */}
+      {/* Features (المميزات) */}
       <FeaturesSection />
 
-      {/* Trust Section */}
+      {/* Trust Section (ليه تثق في وسيط) */}
       <TrustSection />
 
-      {/* Testimonials / Client Reviews */}
+      {/* Testimonials (آراء عملائنا) */}
       <TestimonialsSection />
 
-      {/* Pricing */}
+      {/* Pricing (الأسعار) */}
       <PricingSection />
 
-      {/* Success Stories / Stats */}
+      {/* Success Stories (قصص نجاح) */}
       <SuccessStories />
     </>
   )
