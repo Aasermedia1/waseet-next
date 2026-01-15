@@ -1,12 +1,12 @@
-import Navbar from "../components/Navbar"
-import Hero from "../components/Hero"
-import ProblemsSection from "../components/ProblemsSection"
-import FeaturesSection from "../components/FeaturesSection"
-import TrustSection from "../components/TrustSection"
-import SuccessStories from "../components/SuccessStories"
-import TestimonialsSection from "../components/TestimonialsSection"
-import FAQSection from "../components/FAQSection"
-import PricingSection from "../components/PricingSection"
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import ProblemsSection from "../components/ProblemsSection";
+import FeaturesSection from "../components/FeaturesSection";
+import TrustSection from "../components/TrustSection";
+import SuccessStories from "../components/SuccessStories";
+import TestimonialsSection from "../components/TestimonialsSection";
+import FAQSection from "../components/FAQSection";
+import PricingSection from "../components/PricingSection";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       {/* Navbar */}
       <Navbar />
 
-      {/* Hero / Welcome */}
+      {/* Hero Section */}
       <Hero />
 
       {/* Problems / Challenges */}
@@ -23,21 +23,20 @@ export default function Home() {
       {/* Features / المميزات */}
       <FeaturesSection />
 
-      {/* Trust / ليه تثق في وسيط */}
+      {/* Trust Section */}
       <TrustSection />
 
-      {/* Success Stories / قصص نجاح */}
+      {/* Success Stories */}
       <SuccessStories />
 
-      {/* Testimonials / آراء عملائنا */}
+      {/* Client Testimonials */}
       <TestimonialsSection />
 
-      {/* FAQ / الأسئلة الشائعة */}
+      {/* FAQ */}
       <FAQSection />
 
-      {/* Pricing / الأسعار */}
+      {/* ✅ Pricing Section (now back and visible!) */}
       <PricingSection />
-
     </>
-  )
+  );
 }
