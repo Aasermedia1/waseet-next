@@ -23,6 +23,10 @@ export default function Home() {
         {/* Success Stories Section */}
         <section className="py-20 text-center">
           <h2 className="text-green-600 text-sm font-semibold mb-2">قصص نجاح</h2>
+          <div className="mt-16">
+  <TestimonialsCarousel />
+</div>
+
           <h3 className="text-3xl font-bold mb-4">أصحاب بيزنس زيك حققوا نتائج مذهلة</h3>
           <p className="text-gray-600 mb-8">
             اسمع من أصحاب الأعمال المصريين اللي استخدموا وسيط وغيروا طريقة شغلهم
