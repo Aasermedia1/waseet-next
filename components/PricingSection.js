@@ -2,9 +2,9 @@ export default function PricingSection() {
   return (
     <section className="py-20 bg-gray-50 font-cairo text-center px-4">
       
-      {/* Title */}
+      {/* Section Title */}
       <div className="max-w-2xl mx-auto mb-6">
-        <h2 className="text-4xl font-extrabold text-gray-900">
+        <h2 className="text-4xl font-extrabold text-gray-900 mb-1">
           الأسعار
         </h2>
         <p className="text-gray-700 text-lg">
@@ -12,19 +12,21 @@ export default function PricingSection() {
         </p>
       </div>
 
-      {/* Pricing Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      {/* Cards Container */}
+      <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-5xl mx-auto">
 
-        {/* Monthly Package */}
-        <div className="bg-white rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300 text-right p-6">
-          <div className="font-bold text-xl text-green-600 mb-2">
-            الباقة الأساسية
+        {/* Monthly Plan Card */}
+        <div className="flex-1 border border-green-600 rounded-xl p-6 text-right bg-white shadow-lg">
+          <div className="relative">
+            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
+              الباقة الشهرية
+            </div>
           </div>
-          <p className="text-gray-600 mb-4">
-            مثالية للمتاجر الصغيرة والمبتدئين
-          </p>
 
-          {/* Price */}
+          <div className="mt-6 font-bold text-xl text-gray-800 mb-2">
+            مثالية للمتاجر الصغيرة والمبتدئين
+          </div>
+
           <div className="text-5xl font-extrabold text-gray-900 mb-1">
             199
           </div>
@@ -32,32 +34,32 @@ export default function PricingSection() {
             جنيه / شهرياً
           </div>
 
-          {/* Features List */}
-          <ul className="text-gray-700 space-y-2 mb-6 list-inside list-disc">
-            <li>حتى 500 رسالة يومياً</li>
-            <li>ردود تلقائية ذكية</li>
-            <li>إدارة الطلبات</li>
-            <li>تقارير تفصيلية</li>
-            <li>دعم فني على مدار الساعة</li>
-            <li>تكامل مع متجرك</li>
+          <ul className="text-gray-800 space-y-2 mb-6 list-none rtl:text-right">
+            <li>✔ حتى 500 رسالة يومياً</li>
+            <li>✔ ردود تلقائية ذكية</li>
+            <li>✔ إدارة الطلبات</li>
+            <li>✔ تقارير تفصيلية</li>
+            <li>✔ دعم فني على مدار الساعة</li>
+            <li>✔ تكامل مع متجرك</li>
           </ul>
 
-          {/* Call to Action */}
-          <button className="bg-green-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-green-700 transition">
+          <button className="bg-green-600 text-white font-bold w-full py-3 rounded-lg hover:bg-green-700 transition">
             اشترك الآن
           </button>
         </div>
 
-        {/* Yearly Package */}
-        <div className="bg-white rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow duration-300 text-right p-6">
-          <div className="font-bold text-xl text-green-600 mb-2">
-            الباقة السنوية
+        {/* Yearly Plan Card */}
+        <div className="flex-1 border border-green-600 rounded-xl p-6 text-right bg-white shadow-lg">
+          <div className="relative">
+            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
+              الباقة السنوية
+            </div>
           </div>
-          <p className="text-gray-600 mb-4">
-            مثالية للمستخدمين اللي بيدفعوا سنوي ويوفروا أكثر
-          </p>
 
-          {/* Price */}
+          <div className="mt-6 font-bold text-xl text-gray-800 mb-2">
+            اشتراك سنوي مع زيادة عدد الرسائل
+          </div>
+
           <div className="text-5xl font-extrabold text-gray-900 mb-1">
             190
           </div>
@@ -65,23 +67,21 @@ export default function PricingSection() {
             جنيه / سنوي
           </div>
 
-          {/* Features List */}
-          <ul className="text-gray-700 space-y-2 mb-6 list-inside list-disc">
-            <li>حتى 1000 رسالة يومياً</li>
-            <li>ردود تلقائية ذكية</li>
-            <li>إدارة الطلبات</li>
-            <li>تقارير تفصيلية</li>
-            <li>دعم فني على مدار الساعة</li>
-            <li>تكامل مع متجرك</li>
+          <ul className="text-gray-800 space-y-2 mb-6 list-none rtl:text-right">
+            <li>✔ حتى 1000 رسالة يومياً</li>
+            <li>✔ ردود تلقائية ذكية</li>
+            <li>✔ إدارة الطلبات</li>
+            <li>✔ تقارير تفصيلية</li>
+            <li>✔ دعم فني على مدار الساعة</li>
+            <li>✔ تكامل مع متجرك</li>
           </ul>
 
-          {/* Call to Action */}
-          <button className="bg-green-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-green-700 transition">
+          <button className="bg-green-600 text-white font-bold w-full py-3 rounded-lg hover:bg-green-700 transition">
             اشترك الآن
           </button>
         </div>
 
       </div>
     </section>
-  );
+  )
 }
