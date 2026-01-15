@@ -3,26 +3,31 @@ import Hero from "../components/Hero"
 import ProblemsSection from "../components/ProblemsSection"
 import FeaturesSection from "../components/FeaturesSection"
 import TrustSection from "../components/TrustSection"
+import TestimonialsSection from "../components/TestimonialsSection"
 import SuccessStories from "../components/SuccessStories"
 
 export default function Home() {
   return (
     <>
+      {/* Navbar */}
       <Navbar />
 
-      {/* Hero Section */}
+      {/* Hero / Welcome */}
       <Hero />
 
-      {/* Problems Section */}
+      {/* Problems / Challenges */}
       <ProblemsSection />
 
-      {/* Features Section (Accordion + Image) */}
+      {/* Features (Accordion + Image) */}
       <FeaturesSection />
 
-      {/* Trust Section (Stats) */}
+      {/* Trust Section */}
       <TrustSection />
 
-      {/* Success Stories Section (Testimonials, etc.) */}
+      {/* Testimonials / Client Reviews */}
+      <TestimonialsSection />
+
+      {/* Success Stories / Stats */}
       <SuccessStories />
     </>
   )
