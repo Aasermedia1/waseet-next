@@ -3,40 +3,40 @@ import Hero from "../components/Hero";
 import ProblemsSection from "../components/ProblemsSection";
 import FeaturesSection from "../components/FeaturesSection";
 import TrustSection from "../components/TrustSection";
+import PricingSection from "../components/PricingSection";
 import SuccessStories from "../components/SuccessStories";
 import TestimonialsSection from "../components/TestimonialsSection";
 import FAQSection from "../components/FAQSection";
-import PricingSection from "../components/PricingSection";
 
 export default function Home() {
   return (
     <>
-      {/* — NAVIGATION — */}
+      {/* NAVBAR */}
       <Navbar />
 
-      {/* — HERO — */}
+      {/* HERO */}
       <Hero />
 
-      {/* — PROBLEMS SECTION — */}
+      {/* PROBLEMS SECTION */}
       <ProblemsSection />
 
-      {/* — FEATURES (المميزات) — */}
+      {/* FEATURES */}
       <FeaturesSection />
 
-      {/* — TRUST SECTION — */}
+      {/* TRUST SECTION */}
       <TrustSection />
 
-      {/* — SUCCESS STORIES (قصص نجاح) — */}
+      {/* ✅ PRICING SECTION */}
+      <PricingSection />
+
+      {/* SUCCESS STORIES (قصص نجاح) */}
       <SuccessStories />
 
-      {/* — TESTIMONIALS (آراء عملائنا) — */}
+      {/* TESTIMONIALS */}
       <TestimonialsSection />
 
-      {/* — FAQ (الأسئلة الشائعة) — */}
+      {/* FAQ SECTION */}
       <FAQSection />
-
-      {/* — PRICING (الأسعار) — */}
-      <PricingSection />
     </>
   );
 }
