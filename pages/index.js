@@ -40,3 +40,15 @@ export default function Home() {
     </>
   );
 }
+import Footer from "../components/Footer";
+
+export default function Home() {
+  return (
+    <>
+      {/* … your other sections … */}
+      <PricingSection />
+      <Footer />
+    </>
+  );
+}
+
