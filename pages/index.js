@@ -7,48 +7,40 @@ import PricingSection from "../components/PricingSection";
 import SuccessStories from "../components/SuccessStories";
 import TestimonialsSection from "../components/TestimonialsSection";
 import FAQSection from "../components/FAQSection";
-
-export default function Home() {
-  return (
-    <>
-      {/* NAVBAR */}
-      <Navbar />
-
-      {/* HERO */}
-      <Hero />
-
-      {/* PROBLEMS SECTION */}
-      <ProblemsSection />
-
-      {/* FEATURES */}
-      <FeaturesSection />
-
-      {/* TRUST SECTION */}
-      <TrustSection />
-
-      {/* ✅ PRICING SECTION */}
-      <PricingSection />
-
-      {/* SUCCESS STORIES (قصص نجاح) */}
-      <SuccessStories />
-
-      {/* TESTIMONIALS */}
-      <TestimonialsSection />
-
-      {/* FAQ SECTION */}
-      <FAQSection />
-    </>
-  );
-}
 import Footer from "../components/Footer";
 
 export default function Home() {
   return (
     <>
-      {/* … your other sections … */}
+      {/* Navbar */}
+      <Navbar />
+
+      {/* Hero */}
+      <Hero />
+
+      {/* Problems / Challenges */}
+      <ProblemsSection />
+
+      {/* Features / المميزات */}
+      <FeaturesSection />
+
+      {/* Trust Section / ليه تثق في وسيط */}
+      <TrustSection />
+
+      {/* Pricing / الأسعار */}
       <PricingSection />
+
+      {/* Success Stories / قصص نجاح */}
+      <SuccessStories />
+
+      {/* Testimonials / آراء عملائنا */}
+      <TestimonialsSection />
+
+      {/* FAQ / الأسئلة الشائعة */}
+      <FAQSection />
+
+      {/* Footer */}
       <Footer />
     </>
   );
 }
-
