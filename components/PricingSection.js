@@ -12,18 +12,18 @@ export default function PricingSection() {
         </p>
       </div>
 
-      {/* Cards Container */}
-      <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-5xl mx-auto">
+      {/* Cards Container (centered + limited width) */}
+      <div className="flex flex-col md:flex-row justify-center items-start gap-8 max-w-4xl mx-auto">
 
-        {/* Monthly Plan Card */}
-        <div className="flex-1 border border-green-600 rounded-xl p-6 text-right bg-white shadow-lg">
-          <div className="relative">
-            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
-              الباقة الشهرية
-            </div>
+        {/* Monthly Card */}
+        <div className="w-full md:w-1/2 border border-green-600 rounded-xl p-6 text-right bg-white shadow-lg">
+          
+          {/* Label */}
+          <div className="bg-green-600 text-white text-sm font-semibold px-4 py-1 rounded-full inline-block mb-4">
+            الباقة الشهرية
           </div>
 
-          <div className="mt-6 font-bold text-xl text-gray-800 mb-2">
+          <div className="font-bold text-xl text-gray-800 mb-2">
             مثالية للمتاجر الصغيرة والمبتدئين
           </div>
 
@@ -34,13 +34,32 @@ export default function PricingSection() {
             جنيه / شهرياً
           </div>
 
-          <ul className="text-gray-800 space-y-2 mb-6 list-none rtl:text-right">
-            <li>✔ حتى 500 رسالة يومياً</li>
-            <li>✔ ردود تلقائية ذكية</li>
-            <li>✔ إدارة الطلبات</li>
-            <li>✔ تقارير تفصيلية</li>
-            <li>✔ دعم فني على مدار الساعة</li>
-            <li>✔ تكامل مع متجرك</li>
+          {/* Features */}
+          <ul className="text-gray-800 space-y-3 mb-6 px-4">
+            <li className="flex justify-between items-center">
+              <span>حتى 500 رسالة يومياً</span>
+              <span className="text-green-600">✔</span>
+            </li>
+            <li className="flex justify-between items-center">
+              <span>ردود تلقائية ذكية</span>
+              <span className="text-green-600">✔</span>
+            </li>
+            <li className="flex justify-between items-center">
+              <span>إدارة الطلبات</span>
+              <span className="text-green-600">✔</span>
+            </li>
+            <li className="flex justify-between items-center">
+              <span>تقارير تفصيلية</span>
+              <span className="text-green-600">✔</span>
+            </li>
+            <li className="flex justify-between items-center">
+              <span>دعم فني على مدار الساعة</span>
+              <span className="text-green-600">✔</span>
+            </li>
+            <li className="flex justify-between items-center">
+              <span>تكامل مع متجرك</span>
+              <span className="text-green-600">✔</span>
+            </li>
           </ul>
 
           <button className="bg-green-600 text-white font-bold w-full py-3 rounded-lg hover:bg-green-700 transition">
@@ -48,15 +67,14 @@ export default function PricingSection() {
           </button>
         </div>
 
-        {/* Yearly Plan Card */}
-        <div className="flex-1 border border-green-600 rounded-xl p-6 text-right bg-white shadow-lg">
-          <div className="relative">
-            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
-              الباقة السنوية
-            </div>
+        {/* Yearly Card */}
+        <div className="w-full md:w-1/2 border border-green-600 rounded-xl p-6 text-right bg-white shadow-lg">
+          
+          <div className="bg-green-600 text-white text-sm font-semibold px-4 py-1 rounded-full inline-block mb-4">
+            الباقة السنوية
           </div>
 
-          <div className="mt-6 font-bold text-xl text-gray-800 mb-2">
+          <div className="font-bold text-xl text-gray-800 mb-2">
             اشتراك سنوي مع زيادة عدد الرسائل
           </div>
 
@@ -67,13 +85,31 @@ export default function PricingSection() {
             جنيه / سنوي
           </div>
 
-          <ul className="text-gray-800 space-y-2 mb-6 list-none rtl:text-right">
-            <li>✔ حتى 1000 رسالة يومياً</li>
-            <li>✔ ردود تلقائية ذكية</li>
-            <li>✔ إدارة الطلبات</li>
-            <li>✔ تقارير تفصيلية</li>
-            <li>✔ دعم فني على مدار الساعة</li>
-            <li>✔ تكامل مع متجرك</li>
+          <ul className="text-gray-800 space-y-3 mb-6 px-4">
+            <li className="flex justify-between items-center">
+              <span>حتى 1000 رسالة يومياً</span>
+              <span className="text-green-600">✔</span>
+            </li>
+            <li className="flex justify-between items-center">
+              <span>ردود تلقائية ذكية</span>
+              <span className="text-green-600">✔</span>
+            </li>
+            <li className="flex justify-between items-center">
+              <span>إدارة الطلبات</span>
+              <span className="text-green-600">✔</span>
+            </li>
+            <li className="flex justify-between items-center">
+              <span>تقارير تفصيلية</span>
+              <span className="text-green-600">✔</span>
+            </li>
+            <li className="flex justify-between items-center">
+              <span>دعم فني على مدار الساعة</span>
+              <span className="text-green-600">✔</span>
+            </li>
+            <li className="flex justify-between items-center">
+              <span>تكامل مع متجرك</span>
+              <span className="text-green-600">✔</span>
+            </li>
           </ul>
 
           <button className="bg-green-600 text-white font-bold w-full py-3 rounded-lg hover:bg-green-700 transition">
@@ -83,5 +119,5 @@ export default function PricingSection() {
 
       </div>
     </section>
-  )
+  );
 }
