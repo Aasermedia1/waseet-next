@@ -3,9 +3,9 @@ import Hero from "../components/Hero";
 import ProblemsSection from "../components/ProblemsSection";
 import FeaturesSection from "../components/FeaturesSection";
 import TrustSection from "../components/TrustSection";
-import PricingSection from "../components/PricingSection";
 import SuccessStories from "../components/SuccessStories";
 import TestimonialsSection from "../components/TestimonialsSection";
+import PricingSection from "../components/PricingSection";
 import FAQSection from "../components/FAQSection";
 
 export default function Home() {
