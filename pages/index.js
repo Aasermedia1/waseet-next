@@ -28,7 +28,7 @@ export default function Home() {
       <SuccessStories />
 
       {/* Testimonials Carousel */}
-      <div className="mt-16 px-4">
+      <div className="mt-12 px-4">
         <TestimonialsCarousel />
       </div>
     </>
