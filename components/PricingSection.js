@@ -1,123 +1,65 @@
 export default function PricingSection() {
   return (
-    <section className="py-20 bg-gray-50 font-cairo text-center px-4">
-      
-      {/* Section Title */}
-      <div className="max-w-2xl mx-auto mb-6">
-        <h2 className="text-4xl font-extrabold text-gray-900 mb-1">
-          الأسعار
-        </h2>
-        <p className="text-gray-700 text-lg">
+    <section className="bg-white py-20 font-cairo text-right px-4">
+      <div className="text-center mb-12">
+        <h2 className="text-green-600 font-bold text-sm mb-2">الأسعار</h2>
+        <h3 className="text-4xl font-extrabold text-gray-900 mb-2">
           أسعار واضحة وشفافة
+        </h3>
+        <p className="text-gray-700 text-base">
+          باقة واحدة شاملة لكل احتياجاتك
         </p>
       </div>
 
-      {/* Cards Container (centered + limited width) */}
-      <div className="flex flex-col md:flex-row justify-center items-start gap-8 max-w-4xl mx-auto">
+      <div className="flex justify-center">
+        <div className="bg-[#F9FBFC] border border-green-500 rounded-2xl p-8 max-w-md w-full shadow-md">
 
-        {/* Monthly Card */}
-        <div className="w-full md:w-1/2 border border-green-600 rounded-xl p-6 text-right bg-white shadow-lg">
-          
-          {/* Label */}
-          <div className="bg-green-600 text-white text-sm font-semibold px-4 py-1 rounded-full inline-block mb-4">
-            الباقة الشهرية
+          <div className="text-center mb-4">
+            <span className="inline-block bg-green-600 text-white text-sm font-bold py-1 px-4 rounded-full">
+              الباقة الوحيدة
+            </span>
           </div>
 
-          <div className="font-bold text-xl text-gray-800 mb-2">
+          <h4 className="text-xl font-bold text-gray-800 mb-1">الباقة الأساسية</h4>
+          <p className="text-gray-600 text-sm mb-4">
             مثالية للمتاجر الصغيرة والمبتدئين
-          </div>
+          </p>
 
-          <div className="text-5xl font-extrabold text-gray-900 mb-1">
-            199
-          </div>
-          <div className="text-lg text-gray-700 mb-6">
-            جنيه / شهرياً
-          </div>
+          <div className="text-5xl font-extrabold text-gray-900 mb-1">195</div>
+          <div className="text-gray-700 text-lg mb-6">جنيه / شهرياً</div>
 
-          {/* Features */}
-          <ul className="text-gray-800 space-y-3 mb-6 px-4">
-            <li className="flex justify-between items-center">
+          <ul className="space-y-3 text-gray-800 mb-8">
+            <li className="flex items-center justify-between">
               <span>حتى 500 رسالة يومياً</span>
-              <span className="text-green-600">✔</span>
+              <span className="text-green-600 font-bold">✔</span>
             </li>
-            <li className="flex justify-between items-center">
+            <li className="flex items-center justify-between">
               <span>ردود تلقائية ذكية</span>
-              <span className="text-green-600">✔</span>
+              <span className="text-green-600 font-bold">✔</span>
             </li>
-            <li className="flex justify-between items-center">
+            <li className="flex items-center justify-between">
               <span>إدارة الطلبات</span>
-              <span className="text-green-600">✔</span>
+              <span className="text-green-600 font-bold">✔</span>
             </li>
-            <li className="flex justify-between items-center">
+            <li className="flex items-center justify-between">
               <span>تقارير تفصيلية</span>
-              <span className="text-green-600">✔</span>
+              <span className="text-green-600 font-bold">✔</span>
             </li>
-            <li className="flex justify-between items-center">
+            <li className="flex items-center justify-between">
               <span>دعم فني على مدار الساعة</span>
-              <span className="text-green-600">✔</span>
+              <span className="text-green-600 font-bold">✔</span>
             </li>
-            <li className="flex justify-between items-center">
+            <li className="flex items-center justify-between">
               <span>تكامل مع متجرك</span>
-              <span className="text-green-600">✔</span>
+              <span className="text-green-600 font-bold">✔</span>
             </li>
           </ul>
 
-          <button className="bg-green-600 text-white font-bold w-full py-3 rounded-lg hover:bg-green-700 transition">
+          <button className="w-full bg-green-600 text-white font-bold py-3 rounded-lg hover:bg-green-700 transition">
             اشترك الآن
           </button>
         </div>
-
-        {/* Yearly Card */}
-        <div className="w-full md:w-1/2 border border-green-600 rounded-xl p-6 text-right bg-white shadow-lg">
-          
-          <div className="bg-green-600 text-white text-sm font-semibold px-4 py-1 rounded-full inline-block mb-4">
-            الباقة السنوية
-          </div>
-
-          <div className="font-bold text-xl text-gray-800 mb-2">
-            اشتراك سنوي مع زيادة عدد الرسائل
-          </div>
-
-          <div className="text-5xl font-extrabold text-gray-900 mb-1">
-            190
-          </div>
-          <div className="text-lg text-gray-700 mb-6">
-            جنيه / سنوي
-          </div>
-
-          <ul className="text-gray-800 space-y-3 mb-6 px-4">
-            <li className="flex justify-between items-center">
-              <span>حتى 1000 رسالة يومياً</span>
-              <span className="text-green-600">✔</span>
-            </li>
-            <li className="flex justify-between items-center">
-              <span>ردود تلقائية ذكية</span>
-              <span className="text-green-600">✔</span>
-            </li>
-            <li className="flex justify-between items-center">
-              <span>إدارة الطلبات</span>
-              <span className="text-green-600">✔</span>
-            </li>
-            <li className="flex justify-between items-center">
-              <span>تقارير تفصيلية</span>
-              <span className="text-green-600">✔</span>
-            </li>
-            <li className="flex justify-between items-center">
-              <span>دعم فني على مدار الساعة</span>
-              <span className="text-green-600">✔</span>
-            </li>
-            <li className="flex justify-between items-center">
-              <span>تكامل مع متجرك</span>
-              <span className="text-green-600">✔</span>
-            </li>
-          </ul>
-
-          <button className="bg-green-600 text-white font-bold w-full py-3 rounded-lg hover:bg-green-700 transition">
-            اشترك الآن
-          </button>
-        </div>
-
       </div>
     </section>
-  );
+  )
 }
